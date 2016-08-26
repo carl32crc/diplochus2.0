@@ -4,4 +4,36 @@
     <zingchart zc-values="valuesOfFrontEnd" zc-json="dataConfig" zc-render="myRender" zc-width="725" zc-heigth="500"></zingchart>
     <zingchart zc-values="valuesOfDataBase" zc-json="dataConfigDb" zc-render="myRenderDb" zc-width="725" zc-heigth="500"></zingchart>
   </div>
+  <div class="container-statistics">
+  	 <div class="center-block">
+  	 	<table class="table tableStyle">
+	    <thead>
+	      <tr>
+	        <th>Language Name</th>
+	        <th>Nº Offers</th>
+	      </tr>
+	    </thead>
+	    <tbody ng-repeat="rank in rankingAll">
+	      <tr>
+	        <td>{{rank.name}}</td>
+	        <td>{{rank.num}}</td>
+	      </tr>
+	    </tbody>
+	  </table>
+	  <table class="table tableStyle">
+	    <thead>
+	      <tr>
+	        <th>Back End</th>
+	        <th>Nº Offers</th>
+	      </tr>
+	    </thead>
+	    <tbody ng-repeat="rankDb in rankingAllDb">
+	      <tr>
+	        <td>{{rankDb.name}}</td>
+	        <td>{{rankDb.num}}</td>
+	      </tr>
+	    </tbody>
+	  </table>
+  	 </div>
+  </div>
 </section>

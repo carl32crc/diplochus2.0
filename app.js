@@ -37,7 +37,7 @@ MongoClient.connect(url2, function(err, db) {
 				var o = JSON.parse(response.body);
 
 				var _cPlusPlus,_java,_javaScript,_visualBasic,
-				    _python,_angular,_php,_NET,_cSharp,_cobol,_go,
+				    _python,_angular,_php,_NET,_C,_cobol,_go,
 				    _sql,_mySql,_node,_express,_django,_sQlite,
 				    _mongoDb,_couchDB,_redis,_cassandra,_ruby;
 
@@ -80,8 +80,8 @@ MongoClient.connect(url2, function(err, db) {
 						     	if(item==='NET'){
 						     		_NET = arrCont[7]++;
 						     	}
-						     	if(item==='C#'){
-						     		_cSharp = arrCont[8]++;
+						     	if(item==='C'){
+						     		_C = arrCont[8]++;
 						     	}
 						     	if(item==='COBOL'){
 						     		_cobol = arrCont[9]++;
@@ -128,12 +128,12 @@ MongoClient.connect(url2, function(err, db) {
 
 				var ranking={_numOffers:[{name:"C++",num:_cPlusPlus},{name:"Java",num:_java},{name:"JavaScript",num:_javaScript},
 							  {name:"Ruby",num:_ruby},{name:"Python",num:_python},{name:"Angular",num:_angular},
-							  {name:"PHP",num:_php},{name:"Net",num:_NET},{name:"C#",cSharp:_cSharp},
+							  {name:"PHP",num:_php},{name:"Net",num:_NET},{name:"C",num:_C},
 							  {name:"Cobol",num:_cobol},{name:"Go",num:_go}]}
 
 				var rankingDb={_numOffers:[{name:"SQL",num:_sql},{name:"MySQL",num:_mySql},{name:"Node",num:_node},
 							  {name:"Express",num:_express},{name:"Django",num:_django},{name:"sQlite",num:_sQlite},
-							  {name:"MongoDb",num:_mongoDb},{name:"CouchDB",num:_couchDB},{name:"Redis",cSharp:_redis},
+							  {name:"MongoDb",num:_mongoDb},{name:"CouchDB",num:_couchDB},{name:"Redis",num:_redis},
 							  {name:"Cassandra",num:_cassandra},{name:"Ruby",num:_ruby}]}
 
 

@@ -7,17 +7,22 @@ angular.module("myAppControllers", ['zingchart-angularjs'])
 		 $http.get('/offers')
 	        .success(function(data) {
 	        	console.log(data);
-	        	var pos1=parseInt(data[2].positionOne);
-	        	var pos2=parseInt(data[2].positionTwo);
-	        	var pos3=parseInt(data[2].positionThree);
-	        	var pos4=parseInt(data[2].positionFour);
-	        	var pos5=parseInt(data[2].positionFive);
-	        	var pos1Db=parseInt(data[3].positionOne);
-	        	var pos2Db=parseInt(data[3].positionTwo);
-	        	var pos3Db=parseInt(data[3].positionThree);
-	        	var pos4Db=parseInt(data[3].positionFour);
-	        	var pos5Db=parseInt(data[3].positionFive);
+	        	var pos1=parseFloat(data[2].positionOne);
+	        	var pos2=parseFloat(data[2].positionTwo);
+	        	var pos3=parseFloat(data[2].positionThree);
+	        	var pos4=parseFloat(data[2].positionFour);
+	        	var pos5=parseFloat(data[2].positionFive);
+	        	var pos1Db=parseFloat(data[3].positionOne);
+	        	var pos2Db=parseFloat(data[3].positionTwo);
+	        	var pos3Db=parseFloat(data[3].positionThree);
+	        	var pos4Db=parseFloat(data[3].positionFour);
+	        	var pos5Db=parseFloat(data[3].positionFive);
 
+	        	$scope.rankingAll=data[0]._numOffers;
+	        	$scope.rankingAllDb=data[1]._numOffers;
+
+	        	console.log($scope.rankingAll);
+	        	console.log($scope.rankingAllDb);
 
 	            $scope.valuesOfFrontEnd = [[pos1],[pos2],[pos3],[pos4],[pos5]];
 	            $scope.valuesOfDataBase = [[pos1Db],[pos2Db],[pos3Db],[pos4Db],[pos5Db]];
@@ -122,7 +127,7 @@ angular.module("myAppControllers", ['zingchart-angularjs'])
 					 	},
 					 title: {
 				 	  fontColor: "#fff",
-				 	  text: 'Data Base',
+				 	  text: 'Back End',
 				 	  align: "left",
 				 	  offsetX: 10,
 				 	  fontFamily: "Open Sans",
