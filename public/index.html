@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myPage">
+  <head>
+    <title>Statistics</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <script src="js/zingchart/client/zingchart.min.js"></script>
+    <script src="js/zingchart-angularjs/src/zingchart-angularjs.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+          <div class="container">
+            <div class="navbar-header"><a href="#" class="navbar-brand">Statistics</a></div>
+            <div id="navbar" class="collapse navbar-collapse">
+              <ul class="nav navbar-nav">
+                <li ng-class="{ 'active' : $root.section === 'pieStatistics' }"><a href="/offers">Offers</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+    </div>
+    <div class="container">
+      <form class="form-group">
+        <div class="row">
+              <div class="col-lg-10 col-md-8 col-sm-5">
+                  <input class="form-control" type="text" name="name" required placeholder="Write your skill or city..."/>
+              </div>
+              <div class="col-lg-1" class="col-md-2 col-sm-3">
+                <input class="btn btn-default btn-info" type="submit" value="Search"/>
+              </div>
+          </div>
+       </form>
+     </div>
+      <div ng-view></div>
+    <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.6/angular-route.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular-resource.min.js"></script>
+    <script src="js/angular-logic-page/app.js"></script>
+    <script src="js/angular-logic-page/routing.js"></script>
+    <script src="js/angular-logic-page/controllers.js"></script>
+  </body>
+</html>

@@ -1,0 +1,1 @@
+angular.module('myPage',[ 'myAppControllers','myAppConfig'])

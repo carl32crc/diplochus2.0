@@ -1,0 +1,92 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "zingchart",
+        "scope": null,
+        "escapedName": "zingchart",
+        "name": "zingchart",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "C:\\Users\\Carlos\\Desktop\\basic-auth-demos\\express-version\\views"
+    ]
+  ],
+  "_from": "zingchart@latest",
+  "_id": "zingchart@2.4.1",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/zingchart",
+  "_nodeVersion": "4.2.6",
+  "_npmOperationalInternal": {
+    "host": "packages-12-west.internal.npmjs.com",
+    "tmp": "tmp/zingchart-2.4.1.tgz_1470252072724_0.638741354458034"
+  },
+  "_npmUser": {
+    "name": "zingchart",
+    "email": "support@zingchart.com"
+  },
+  "_npmVersion": "2.14.12",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "zingchart",
+    "scope": null,
+    "escapedName": "zingchart",
+    "name": "zingchart",
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "https://registry.npmjs.org/zingchart/-/zingchart-2.4.1.tgz",
+  "_shasum": "e2fab9dedf23f2afa1a5fa77220f2687fbf1f016",
+  "_shrinkwrap": null,
+  "_spec": "zingchart",
+  "_where": "C:\\Users\\Carlos\\Desktop\\basic-auth-demos\\express-version\\views",
+  "author": {
+    "name": "ZingChart"
+  },
+  "bugs": {
+    "url": "https://github.com/zingchart/ZingChart/issues"
+  },
+  "dependencies": {},
+  "description": "A npm package for easy downloading of ZingChart.",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "e2fab9dedf23f2afa1a5fa77220f2687fbf1f016",
+    "tarball": "https://registry.npmjs.org/zingchart/-/zingchart-2.4.1.tgz"
+  },
+  "gitHead": "2af8ccdb0f538b22c8920a33efb19f06ef1a2d60",
+  "homepage": "https://github.com/zingchart/ZingChart",
+  "keywords": [
+    "zingchart",
+    "chart",
+    "charting",
+    "javascript",
+    "charts",
+    "html5",
+    "charts"
+  ],
+  "main": "index.js",
+  "maintainers": [
+    {
+      "name": "zingchart",
+      "email": "support@zingchart.com"
+    }
+  ],
+  "name": "zingchart",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zingchart/ZingChart.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "2.4.1"
+}
