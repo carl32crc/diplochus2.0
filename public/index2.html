@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		var app=angular.module("app",["chart.js"]);
+		app.factory("Services",['http',function($http){
+
+			var getOffers=function(){
+				return $http.get("/offers");
+			}
+			return{
+				getOffers:getOffers;
+			}
+		}]);
+
+		app.controller('myControllers',['$scope','Services',function($scope,Services){
+
+			function getOffers(){
+				Services.getOffers().then(function successCallback(response){
+					$scope.labels=[];
+					$scope.data = [];
+					angular.forEach(response.data, function(value, key){
+						$scope.labels=value;
+					)};
+				});
+			}
+
+		}]);
+	</script>
+</body>
+</html>

@@ -1,15 +1,15 @@
-
 <section>
-  <div id="container-statistics">
-    <zingchart zc-values="valuesOfFrontEnd" zc-json="dataConfig" zc-render="myRender" zc-width="725" zc-heigth="500"></zingchart>
-    <zingchart zc-values="valuesOfDataBase" zc-json="dataConfigDb" zc-render="myRenderDb" zc-width="725" zc-heigth="500"></zingchart>
-  </div>
-  <div class="container-statistics">
-  	 <div class="center-block">
-  	 	<table class="table tableStyle">
+<div class="container-statistics">
+	<zingchart zc-values="valuesOfFrontEnd" zc-json="dataConfig" zc-render="myRender"></zingchart>
+	<zingchart zc-values="valuesOfDataBase" zc-json="dataConfigDb" zc-render="myRenderDb" ></zingchart>
+</div>
+  
+  <div class="center-table">
+  	 <div class="datagrid">
+  	 	<table>
 	    <thead>
 	      <tr>
-	        <th>Language Name</th>
+	        <th>Language</th>
 	        <th>Nº Offers</th>
 	      </tr>
 	    </thead>
@@ -20,7 +20,9 @@
 	      </tr>
 	    </tbody>
 	  </table>
-	  <table class="table tableStyle">
+	</div>
+	  <div class="datagrid">
+	  <table>
 	    <thead>
 	      <tr>
 	        <th>Back End</th>

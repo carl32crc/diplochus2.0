@@ -17,15 +17,19 @@ angular.module("myAppControllers", ['zingchart-angularjs'])
 	        	var pos3Db=parseFloat(data[3].positionThree);
 	        	var pos4Db=parseFloat(data[3].positionFour);
 	        	var pos5Db=parseFloat(data[3].positionFive);
-
+	        	console.log(pos1);
+	        	console.log(pos2);
+	        	console.log(pos3);
+	        	console.log(pos4);
+	        	console.log(pos5);
 	        	$scope.rankingAll=data[0]._numOffers;
 	        	$scope.rankingAllDb=data[1]._numOffers;
 
 	        	console.log($scope.rankingAll);
 	        	console.log($scope.rankingAllDb);
 
-	            $scope.valuesOfFrontEnd = [[pos1],[pos2],[pos3],[pos4],[pos5]];
-	            $scope.valuesOfDataBase = [[pos1Db],[pos2Db],[pos3Db],[pos4Db],[pos5Db]];
+	            $scope.valuesOfFrontEnd = [[pos5],[pos4],[pos2],[pos1],[pos3]];
+	            $scope.valuesOfDataBase = [[pos2Db],[pos1Db],[pos3Db],[pos4Db],[pos5Db]];
 
 				 $scope.dataConfig = {
 	            		type:"pie",
@@ -55,7 +59,7 @@ angular.module("myAppControllers", ['zingchart-angularjs'])
 					 title: {
 				 	  fontColor: "#fff",
 				 	  text: 'Programming Languages',
-				 	  align: "left",
+				 	  align: "center",
 				 	  offsetX: 10,
 				 	  fontFamily: "Open Sans",
 				 	  fontSize: 20
@@ -67,31 +71,31 @@ angular.module("myAppControllers", ['zingchart-angularjs'])
 				 	  fontFamily: "Open Sans",
 				 	  fontSize: "12",
 				 	  text: 'Skills with more demand in 2016',
-				 	  align: "left"
+				 	  align: "center"
 				 	},
 				 	plotarea: {
 				 	  margin: "20 0 0 0"
 				 	},
 					 	series : [
 								{
-								  text:data[0]._numOffers[0].name,
+								  text:data[0]._numOffers[4].name,
+								  backgroundColor: '#FF7965'
+								},
+								{
+								  text:data[0]._numOffers[3].name,
 								  backgroundColor: '#50ADF5'
 								},
 								{
 								  text:data[0]._numOffers[1].name,
-								  backgroundColor: '#FF7965'
+								  backgroundColor: '#6FB07F'
+								},
+								{
+								  text:data[0]._numOffers[0].name,
+								  backgroundColor: '#6877e5'
 								},
 								{
 								  text:data[0]._numOffers[2].name,
 								  backgroundColor: '#FFCB45'
-								},
-								{
-								  text:data[0]._numOffers[3].name,
-								  backgroundColor: '#6877e5'
-								},
-								{
-								  text:data[0]._numOffers[4].name,
-								  backgroundColor: '#6FB07F'
 								}
 							]
 	            };
@@ -128,7 +132,7 @@ angular.module("myAppControllers", ['zingchart-angularjs'])
 					 title: {
 				 	  fontColor: "#fff",
 				 	  text: 'Back End',
-				 	  align: "left",
+				 	  align: "center",
 				 	  offsetX: 10,
 				 	  fontFamily: "Open Sans",
 				 	  fontSize: 20
@@ -140,19 +144,19 @@ angular.module("myAppControllers", ['zingchart-angularjs'])
 				 	  fontFamily: "Open Sans",
 				 	  fontSize: "12",
 				 	  text: 'Skills with more demand in 2016',
-				 	  align: "left"
+				 	  align: "center"
 				 	},
 				 	plotarea: {
 				 	  margin: "20 0 0 0"
 				 	},
 					 	series : [
 								{
-								  text:data[1]._numOffers[0].name,
+								  text:data[1]._numOffers[1].name,
 								  backgroundColor: '#50ADF5'
 								},
 								{
-								  text:data[1]._numOffers[1].name,
-								  backgroundColor: '#FF7965'
+								  text:data[1]._numOffers[0].name,
+								  backgroundColor: '#6FB07F'
 								},
 								{
 								  text:data[1]._numOffers[2].name,
@@ -164,7 +168,7 @@ angular.module("myAppControllers", ['zingchart-angularjs'])
 								},
 								{
 								  text:data[1]._numOffers[4].name,
-								  backgroundColor: '#6FB07F'
+								  backgroundColor: '#FF7965'
 								}
 							]
 	            };

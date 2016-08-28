@@ -2,6 +2,7 @@
 <html lang="en" ng-app="myPage">
   <head>
     <title>Statistics</title>
+   
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
@@ -9,18 +10,64 @@
     <script src="js/zingchart-angularjs/src/zingchart-angularjs.js"></script>
   </head>
   <body>
-    <div class="container" >
-      <form class="form-signin text-center">
-        <h2 class="form-signin-heading">Diplodocus</h2>
-            <input type="text" id="inputSearch" class="form-control" placeholder="Searh skill or city..." required>
-            <button class="btn btn-lg btn-block color-button" type="submit">Search Statistics</button>
+    <div class="header">
+    <div class="container-header">
+    <header>
+      <!-- logo -->
+          <div class="logo-container" id='npm-logo'>
+            <a href="/">
+              <svg viewBox="0 0 300 182">
+                  <g transform="translate(0.000000,182.000000) scale(0.100000,-0.100000)"
+                  fill="#FFFFFF" stroke="none">
+                  <path d="M2446 1400 l-326 -419 62 -166 c33 -91 64 -165 67 -165 3 0 69 116
+                  145 258 77 141 213 391 303 555 90 164 166 304 169 312 6 15 -12 25 -67 38
+                  -25 6 -45 -18 -353 -413z"/>
+                  <path d="M2865 1734 c-15 -25 -25 -47 -23 -48 1 -2 32 -1 67 2 59 4 64 6 76
+                  36 15 35 12 37 -56 50 -36 6 -38 5 -64 -40z"/>
+                  <path d="M1280 945 c-129 -68 -236 -128 -238 -134 -4 -11 348 -791 357 -791 3
+                  0 21 118 39 263 60 475 91 722 97 755 4 23 2 32 -7 31 -7 0 -119 -56 -248
+                  -124z"/>
+                  <path d="M1560 1067 c0 -3 -20 -165 -45 -360 -25 -196 -45 -365 -45 -376 0
+                  -20 5 -21 128 -21 71 0 131 2 133 5 5 5 -88 735 -94 742 -7 7 -77 16 -77 10z"/>
+                  <path d="M1664 1038 c3 -13 33 -239 66 -503 34 -264 64 -487 67 -495 4 -12 7
+                  -11 14 5 20 46 280 927 276 932 -3 3 -84 20 -179 38 -278 52 -249 50 -244 23z"/>
+                  <path d="M2084 873 c-9 -32 -50 -168 -90 -302 -41 -135 -72 -247 -69 -249 2
+                  -3 49 21 103 52 98 55 100 57 151 142 28 47 51 91 51 97 0 21 -113 317 -121
+                  317 -5 0 -16 -26 -25 -57z"/>
+                  <path d="M791 650 c-112 -70 -207 -134 -211 -141 -4 -8 -11 -42 -15 -75 l-7
+                  -61 59 -7 c32 -3 168 -15 303 -26 135 -11 260 -22 279 -26 29 -5 33 -3 29 13
+                  -3 10 -50 116 -104 236 -68 149 -103 217 -114 216 -8 0 -107 -58 -219 -129z"/>
+                  <path d="M25 553 c10 -10 482 -173 501 -173 14 0 33 141 19 145 -5 2 -93 9
+                  -195 15 -102 6 -219 13 -260 17 -48 3 -71 2 -65 -4z"/>
+                  <path d="M1436 98 c-11 -100 -12 -98 44 -98 28 0 50 3 50 7 0 8 -79 143 -84
+                  143 -2 0 -6 -24 -10 -52z"/>
+                  <path d="M1841 72 c-11 -33 -21 -62 -21 -66 0 -3 25 -6 55 -6 30 0 55 3 55 8
+                  0 4 -16 33 -34 65 l-33 58 -22 -59z"/>
+                  </g>
+                </svg>
+              </a>
+        </div>
+      <div class="header-item header-search-container">
+        <form class="site-search">
+        <input name="q" value="" type="search" id="site-search" placeholder="Find skill or city" tabindex="1" autocorrect="off" autocapitalize="off" itemprop="query-input" autocomplete="off">
+        <button tabindex="2" type="submit">
+          <span class="a11y-only">Search</span>
+            <svg viewBox="0 0 34 34" fill="none" stroke="currentColor">
+                <ellipse stroke-width="3" cx="16" cy="15" rx="12" ry="12"/>
+                <path d="M26 26 l 8 8" stroke-width="3" stroke-linecap="square"/>
+            </svg>
+        </button>
       </form>
-     </div>
+
+      </div>
+    </header>
+    </div>
+    </div>
       <div ng-view></div>
       <footer class="footer">
-    <div class="container">
-      &copy; Diplodocus, 2016
-    </div>
+        <div class="container">
+          &copy; Diplodocus, 2016
+        </div>
   </footer><!-- /container -->
     <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.6/angular-route.js"></script>
@@ -28,5 +75,6 @@
     <script src="js/angular-logic-page/app.js"></script>
     <script src="js/angular-logic-page/routing.js"></script>
     <script src="js/angular-logic-page/controllers.js"></script>
+    <!-- END SCRIPTS -->
   </body>
 </html>

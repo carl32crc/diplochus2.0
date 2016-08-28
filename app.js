@@ -65,8 +65,8 @@ MongoClient.connect(url2, function(err, db) {
 						     	if(item==='JAVASCRIPT'){
 						     		_javaScript = arrCont[2]++;
 						     	}
-						     	if(item==='VISUALBASIC'){
-						     		_visualBasic = arrCont[3]++;
+						     	if(item==='C#'){
+						     		_cSharp = arrCont[3]++;
 						     	}
 						     	if(item==='PYTHON'){
 						     		_python = arrCont[4]++;
@@ -127,7 +127,7 @@ MongoClient.connect(url2, function(err, db) {
 				}
 
 				var ranking={_numOffers:[{name:"C++",num:_cPlusPlus},{name:"Java",num:_java},{name:"JavaScript",num:_javaScript},
-							  {name:"Ruby",num:_ruby},{name:"Python",num:_python},{name:"Angular",num:_angular},
+							  {name:"C#",num:_cSharp},{name:"Python",num:_python},{name:"Angular",num:_angular},
 							  {name:"PHP",num:_php},{name:"Net",num:_NET},{name:"C",num:_C},
 							  {name:"Cobol",num:_cobol},{name:"Go",num:_go}]}
 
