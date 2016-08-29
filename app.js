@@ -47,10 +47,10 @@ MongoClient.connect(url2, function(err, db) {
 								contCobol=0,contGo=0,contSql = 0,contMySql = 0,
 								contNode = 0,contExpress = 0,contDjango = 0,
 								contSqlite=0,contMongodb=0,contCouchDb  = 0,contRedis = 0,
-								contCassandra=0,contRuby=0]
+								contCassandra=0,contRuby=0];
 
 					for(var index in objectJSON) {
-						for (subItem in objectJSON[index]) {
+						for (var subItem in objectJSON[index]) {
 							var paragraphSkills = objectJSON[index][subItem].requirementMin.replace(/[.\r\n\t, \/-]+/g, " ").toUpperCase().trim();
 
 							var arraySkills = paragraphSkills.split(' ');
@@ -129,20 +129,20 @@ MongoClient.connect(url2, function(err, db) {
 				var ranking={_numOffers:[{name:"C++",num:_cPlusPlus},{name:"Java",num:_java},{name:"JavaScript",num:_javaScript},
 							{name:"C#",num:_cSharp},{name:"Python",num:_python},{name:"Angular",num:_angular},
 							{name:"PHP",num:_php},{name:"Net",num:_NET},{name:"C",num:_C},
-							{name:"Cobol",num:_cobol},{name:"Go",num:_go}]}
+							{name:"Cobol",num:_cobol},{name:"Go",num:_go}]};
 
 				var rankingDb={_numOffers:[{name:"SQL",num:_sql},{name:"MySQL",num:_mySql},{name:"Node",num:_node},
 							{name:"Express",num:_express},{name:"Django",num:_django},{name:"sQlite",num:_sQlite},
 							{name:"MongoDb",num:_mongoDb},{name:"CouchDB",num:_couchDB},{name:"Redis",num:_redis},
-							{name:"Cassandra",num:_cassandra},{name:"Ruby",num:_ruby}]}
+							{name:"Cassandra",num:_cassandra},{name:"Ruby",num:_ruby}]};
 
 
-					ranking._numOffers = ranking._numOffers.sort(function(obj1,obj2){ 
+					ranking._numOffers = ranking._numOffers.sort(function(obj1,obj2){
 
 							for(var prop in obj1) {
 								prop1=prop;
 							}
-							for(var prop in obj2) {
+							for(prop in obj2) {
 								prop2=prop;
 							}
 							return obj2[prop2]-obj1[prop1];
