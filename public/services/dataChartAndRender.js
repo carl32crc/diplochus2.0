@@ -1,5 +1,5 @@
 angular.module("myChartCreate")
-	.factory('chartcreate', function ($scope) {
+	.factory('getDataAndRender', function () {
 
 		function getDataRankingLanguages(data){
 				var pos1=parseFloat(data[2].positionOne);
@@ -8,9 +8,9 @@ angular.module("myChartCreate")
 				var pos4=parseFloat(data[2].positionFour);
 				var pos5=parseFloat(data[2].positionFive);
 
-				$scope.valuesOfFrontEnd = [[pos5],[pos4],[pos2],[pos1],[pos3]];
+				valuesOfFrontEnd = [[pos5],[pos4],[pos2],[pos1],[pos3]];
 
-			return $scope.valuesOfFrontEnd;
+			return valuesOfFrontEnd;
 		}
 
 		function getDataRankingDb(data){
@@ -20,9 +20,9 @@ angular.module("myChartCreate")
 				var pos4Db=parseFloat(data[3].positionFour);
 				var pos5Db=parseFloat(data[3].positionFive);
 
-				$scope.valuesOfDataBase = [[pos2Db],[pos1Db],[pos3Db],[pos4Db],[pos5Db]];
+				valuesOfDataBase = [[pos2Db],[pos1Db],[pos3Db],[pos4Db],[pos5Db]];
 
-			return $scope.valuesOfDataBase;
+			return valuesOfDataBase;
 		}
 
 		return{

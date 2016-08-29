@@ -1,1 +1,1 @@
-angular.module('myPage',[ 'ngRoute','myAppConfig','myAppControllers'])
+angular.module('myPage',[ 'ngRoute','myAppConfig','myAppControllers','myChartCreate']);
