@@ -3,10 +3,9 @@ var express = require('express');
 var http = require('http');
 var path = require('path');
 
-var favicon = require('serve-favicon'),
-	logger = require('morgan'),
-	bodyParser = require('body-parser'),
-	errorHandler = require('errorhandler');
+var logger = require('morgan'),
+    bodyParser = require('body-parser'),
+    errorHandler = require('errorhandler');
 
 var routerOffers = require('./routes/offers');
 var PORT = process.env.PORT || 8080;
@@ -22,13 +21,13 @@ app.set('view engine', 'jade');
 app.use(logger('dev'));
 app.use(bodyParser.urlencoded({extended: true}));
 
-app.use( require('less-middleware')(path.join(__dirname, 'public')) );
-app.use( express.static(path.join(__dirname, 'public')) );
+app.use( require('less-middleware')(path.join(__dirname, '../client')) );
+app.use( express.static(path.join(__dirname, '../client')) );
 app.use( express.static(path.join(__dirname, 'views')) );
 
 // development only
 if ('development' == app.get('env')) {
-	app.use(errorHandler());
+    app.use(errorHandler());
 }
 
 var urlDb =  process.env.MONGODB_URI || 'mongodb://localhost:27017/offers';
@@ -36,17 +35,17 @@ console.log ("connect to " + urlDb)
 
 MongoClient.connect( urlDb, function(err, db) {
 
-	if (err) throw err;
+    if (err) throw err;
 
-	console.log ("connected!")
-	app.use ('/', routerOffers(db) );
+    console.log ("connected!")
+    app.use ('/', routerOffers(db) );
 
-	app.get('*', function(req, res){
- 	  res.sendfile('./public/index.html');
-  	})
+    app.get('*', function(req, res){
+      res.sendFile( __dirname + '/../client/index.html');
+    })
 
-	app.listen( PORT, function(){
-		console.log('Express server listening on port ' + PORT);
-	});
+    app.listen( PORT, function(){
+        console.log('Express server listening on port ' + PORT);
+    });
 
 } )
