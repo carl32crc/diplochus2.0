@@ -2,50 +2,25 @@ var ranking = require('./data/ranking');
 var rankingDb = require('./data/ranking-db');
 var contBackEnd  = require('./contskillsdata/contBackEnd');
 var contLanguage  = require('./contskillsdata/contProgLanguages');
+var orderData = require('./orderDataDescending/orderDescending');
 
 function parseAndImportData(db,error, response, body) {
 
 			var objectJSON = JSON.parse(response.body);
 
-				for(var index in objectJSON) {
-					for (var subItem in objectJSON[index]) {
+			objectJSON.offers.forEach(function(itemAPI){
 
-						var paragraphSkills = objectJSON[index][subItem].requirementMin.replace(/[.\r\n\t, \/-]+/g, " ").toUpperCase().trim();
-						var arraySkills = paragraphSkills.split(' ');
+				var paragraphSkills = itemAPI.requirementMin.replace(/[.\r\n\t, \/-]+/g, " ").toUpperCase().trim();
+				var arraySkills = paragraphSkills.split(' ');
 
-						arraySkills.forEach(function(item,i){
+				arraySkills.forEach(function(itemSkill,i){
+					contLanguage(ranking,itemSkill);
+					contBackEnd(rankingDb,itemSkill);
+				});
+			});
 
-							for (var index2 in ranking) {
-								for (var subItem in ranking[index2]){
-								contLanguage(item,ranking,index2,subItem);
-								contBackEnd(item,rankingDb,index2,subItem);
-							}
-						}
-					});
-				}
-			}
-
-				ranking._numOffers = ranking._numOffers.sort(function(obj1,obj2){
-
-						for(var property in obj1) {
-							prop1=property;
-						}
-						for(property in obj2) {
-							prop2=property;
-						}
-						return obj2[prop2]-obj1[prop1];
-					});
-
-				rankingDb._numOffers = rankingDb._numOffers.sort(function(obj1,obj2){
-
-						for(var prop in obj1) {
-							prop1=prop;
-						}
-						for(prop in obj2) {
-							prop2=prop;
-						}
-						return obj2[prop2]-obj1[prop1];
-					});
+				orderData(ranking);
+				orderData(rankingDb);
 
 				removeDataOld(db,function( data ) {
 					db.close();

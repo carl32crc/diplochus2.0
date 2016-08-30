@@ -1,40 +1,47 @@
-function getNumSkillsDb(item,rankingDb,index2,subItem){
+function getNumSkillsDb(ranking,itemSkill){
 
-	if(item==='SQL'&& rankingDb[index2][subItem].name ==="SQL"){
-		rankingDb[index2][subItem].num++;
-	}
-	if(item==='MYSQL'&& rankingDb[index2][subItem].name ==="MySQL"){
-		rankingDb[index2][subItem].num++;
-	}
-	if(item==='NODE' && rankingDb[index2][subItem].name ==="Node"){
-		rankingDb[index2][subItem].num++;
-	}
-	if(item==='EXPRESS' && rankingDb[index2][subItem].name ==="Express"){
-		rankingDb[index2][subItem].num++;
-	}
-	if(item==='DJANGO' && rankingDb[index2][subItem].name ==="Django"){
-		rankingDb[index2][subItem].num++;
-	}
-	if(item==='SQLITE' && rankingDb[index2][subItem].name ==="sQlite"){
-		rankingDb[index2][subItem].num++;
-	}
-	if(item==='MONGODB' && rankingDb[index2][subItem].name ==="MongoDb"){
-		rankingDb[index2][subItem].num++;
-	}
-	if(item==='COUCHDB' && rankingDb[index2][subItem].name ==="CouchDB"){
-		rankingDb[index2][subItem].num++;
-	}
-	if(item==='REDIS' && rankingDb[index2][subItem].name ==="Redis"){
-		rankingDb[index2][subItem].num++;
-	}
-	if(item==='CASSANDRA' && rankingDb[index2][subItem].name ==="Cassandra"){
-		rankingDb[index2][subItem].num++;
-	}
-	if(item==='RUBY' && rankingDb[index2][subItem].name ==="Ruby"){
-		rankingDb[index2][subItem].num++;
-	}
+	var itemNum = ranking._numOffers.forEach(function(itemName,i){
 
-	return rankingDb[index2][subItem].num;
+		if(itemSkill==='SQL'&& itemName.name ==="SQL"){
+			itemName.num++;
+		}
+		if(itemSkill==='MYSQL'&& itemName.name ==="MySQL"){
+			itemName.num++;
+		}
+		if(itemSkill==='NODE' && itemName.name ==="Node"){
+			itemName.num++;
+		}
+		if(itemSkill==='EXPRESS' && itemName.name ==="Express"){
+			itemName.num++;
+		}
+		if(itemSkill==='DJANGO' && itemName.name ==="Django"){
+			itemName.num++;
+		}
+		if(itemSkill==='SQLITE' && itemName.name ==="sQlite"){
+			itemName.num++;
+		}
+		if(itemSkill==='MONGODB' && itemName.name ==="MongoDb"){
+			itemName.num++;
+		}
+		if(itemSkill==='COUCHDB' && itemName.name ==="CouchDB"){
+			itemName.num++;
+		}
+		if(itemSkill==='REDIS' && itemName.name ==="Redis"){
+			itemName.num++;
+		}
+		if(itemSkill==='CASSANDRA' && itemName.name ==="Cassandra"){
+			itemName.num++;
+		}
+		if(itemSkill==='RUBY' && itemName.name ==="Ruby"){
+			itemName.num++;
+		}
+
+		return itemName.num;
+
+		});
+
+	return itemNum;
+
 }
 
 module.exports = getNumSkillsDb;
