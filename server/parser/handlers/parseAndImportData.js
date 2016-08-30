@@ -6,6 +6,8 @@ var contBackEnd  = require('./contskillsdata/contBackEnd');
 var contLanguage  = require('./contskillsdata/contProgLanguages');
 var orderData = require('./orderDataDescending/orderDescending');
 var firstPositionInJson = require('./firstFivePosition/firsFivePosition');
+var insertDataInMongo = require('./insertDataMongo/insertRankingMongo');
+var removeDataOld  = require('./removeDataOld/removeDataOld');
 
 function parseAndImportData(db,error, response, body) {
 
@@ -22,64 +24,33 @@ function parseAndImportData(db,error, response, body) {
 				});
 			});
 
-				orderData(ranking);
-				orderData(rankingDb);
-
-				removeDataOld(db,function( data ) {
-					db.close();
-				});
-
-				insertStatistics(db, ranking,function( data ) {
-					db.close();
-				});
-
-				insertStatistics(db, rankingDb,function( data ) {
-					db.close();
-				});
-
-			// var total = ranking._numOffers[0].num+ranking._numOffers[1].num+ranking._numOffers[2].num+ranking._numOffers[3].num+ranking._numOffers[4].num;
-
-			// fivePosLanguage.positionOne = tantPercent(ranking._numOffers[0].num,total);
-			// fivePosLanguage.positionTwo = tantPercent(ranking._numOffers[1].num,total);
-			// fivePosLanguage.positionThree = tantPercent(ranking._numOffers[2].num,total);
-			// fivePosLanguage.positionFour = tantPercent(ranking._numOffers[3].num,total);
-			// fivePosLanguage.positionFive = tantPercent(ranking._numOffers[4].num,total);
-
-			// var totalDb = rankingDb._numOffers[0].num+rankingDb._numOffers[1].num+rankingDb._numOffers[2].num+rankingDb._numOffers[3].num+rankingDb._numOffers[4].num;
-
-			// fivePosDb.positionOne = tantPercent(rankingDb._numOffers[0].num,totalDb);
-			// fivePosDb.positionTwo = tantPercent(rankingDb._numOffers[1].num,totalDb);
-			// fivePosDb.positionThree = tantPercent(rankingDb._numOffers[2].num,totalDb);
-			// fivePosDb.positionFour = tantPercent(rankingDb._numOffers[3].num,totalDb);
-			// fivePosDb.positionFive = tantPercent(rankingDb._numOffers[4].num,totalDb);
+			orderData(ranking);
+			orderData(rankingDb);
 
 			firstPositionInJson(fivePosLanguage,ranking);
 			firstPositionInJson(fivePosDb,rankingDb);
 
-			insertStatistics(db, fivePosLanguage,function( data ) {
+			removeDataOld(db,function( data ) {
 				db.close();
 			});
 
-			insertStatistics(db, fivePosDb,function( data ) {
+			insertDataInMongo(db, ranking,function( data ) {
 				db.close();
 			});
 
+			insertDataInMongo(db, rankingDb,function( data ) {
+				db.close();
+			});
+
+			insertDataInMongo(db, fivePosLanguage,function( data ) {
+				db.close();
+			});
+
+			insertDataInMongo(db, fivePosDb,function( data ) {
+				db.close();
+			});
 			//console.dir(objectJSON);
 			console.log(fivePosDb);
 }
-
-function insertStatistics(db,posRanking, callback) {
-	// Get the documents collection
-	var collection = db.collection('offers');
-	// Find some documents
-	collection.insert(posRanking);
-
-}
-
-function removeDataOld(db,callback){
-	var collection = db.collection('offers');
-	collection.remove( { } );
-}
-
 
 module.exports = parseAndImportData;
