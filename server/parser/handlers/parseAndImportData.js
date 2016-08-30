@@ -8,9 +8,7 @@ function parseAndImportData(db,error, response, body) {
 				for(var index in objectJSON) {
 					for (var subItem in objectJSON[index]) {
 						var paragraphSkills = objectJSON[index][subItem].requirementMin.replace(/[.\r\n\t, \/-]+/g, " ").toUpperCase().trim();
-
 						var arraySkills = paragraphSkills.split(' ');
-
 						arraySkills.forEach(function(item,i){
 							for (var index2 in ranking) {
 								for (var subItem in ranking[index2]){
@@ -48,38 +46,38 @@ function parseAndImportData(db,error, response, body) {
 										if(item==='GO' && ranking[index2][subItem].name ==="Go"){
 											ranking[index2][subItem].num++;
 										}
-										if(item==='SQL'&& ranking[index2][subItem].name ==="SQL"){
-											ranking[index2][subItem].num++;
+										if(item==='SQL'&& rankingDb[index2][subItem].name ==="SQL"){
+											rankingDb[index2][subItem].num++;
 										}
-										if(item==='MYSQL'&& ranking[index2][subItem].name ==="MySQL"){
-											ranking[index2][subItem].num++;
+										if(item==='MYSQL'&& rankingDb[index2][subItem].name ==="MySQL"){
+											rankingDb[index2][subItem].num++;
 										}
-										if(item==='NODE' && ranking[index2][subItem].name ==="Node"){
-											ranking[index2][subItem].num++;
+										if(item==='NODE' && rankingDb[index2][subItem].name ==="Node"){
+											rankingDb[index2][subItem].num++;
 										}
-										if(item==='EXPRESS' && ranking[index2][subItem].name ==="Express"){
-											ranking[index2][subItem].num++;
+										if(item==='EXPRESS' && rankingDb[index2][subItem].name ==="Express"){
+											rankingDb[index2][subItem].num++;
 										}
-										if(item==='DJANGO' && ranking[index2][subItem].name ==="Django"){
-											ranking[index2][subItem].num++;
+										if(item==='DJANGO' && rankingDb[index2][subItem].name ==="Django"){
+											rankingDb[index2][subItem].num++;
 										}
-										if(item==='SQLITE' && ranking[index2][subItem].name ==="sQlite"){
-											ranking[index2][subItem].num++;
+										if(item==='SQLITE' && rankingDb[index2][subItem].name ==="sQlite"){
+											rankingDb[index2][subItem].num++;
 										}
-										if(item==='MONGODB' && ranking[index2][subItem].name ==="MongoDb"){
-											ranking[index2][subItem].num++;
+										if(item==='MONGODB' && rankingDb[index2][subItem].name ==="MongoDb"){
+											rankingDb[index2][subItem].num++;
 										}
-										if(item==='COUCHDB' && ranking[index2][subItem].name ==="CouchDB"){
-											ranking[index2][subItem].num++;
+										if(item==='COUCHDB' && rankingDb[index2][subItem].name ==="CouchDB"){
+											rankingDb[index2][subItem].num++;
 										}
-										if(item==='REDIS' && ranking[index2][subItem].name ==="Redis"){
-											ranking[index2][subItem].num++;
+										if(item==='REDIS' && rankingDb[index2][subItem].name ==="Redis"){
+											rankingDb[index2][subItem].num++;
 										}
-										if(item==='CASSANDRA' && ranking[index2][subItem].name ==="Cassandra"){
-											ranking[index2][subItem].num++;
+										if(item==='CASSANDRA' && rankingDb[index2][subItem].name ==="Cassandra"){
+											rankingDb[index2][subItem].num++;
 										}
-										if(item==='RUBY' && ranking[index2][subItem].name ==="Ruby"){
-											ranking[index2][subItem].num++;
+										if(item==='RUBY' && rankingDb[index2][subItem].name ==="Ruby"){
+											rankingDb[index2][subItem].num++;
 										}
 								}
 							}
@@ -110,6 +108,10 @@ function parseAndImportData(db,error, response, body) {
 						}
 						return obj2[prop2]-obj1[prop1];
 					});
+
+				removeDataOld(db,function( data ) {
+					db.close();
+				});
 
 				insertStatistics(db, ranking,function( data ) {
 					db.close();
@@ -171,6 +173,11 @@ function insertStatistics(db,posRanking, callback) {
 	// Find some documents
 	collection.insert(posRanking);
 
+}
+
+function removeDataOld(db,callback){
+	var collection = db.collection('offers');
+	collection.remove( { } );
 }
 
 module.exports = parseAndImportData;

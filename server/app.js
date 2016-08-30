@@ -13,7 +13,7 @@ var PORT = process.env.PORT || 8080;
 
 var app = express();
 
-app.locals.appname = 'Express.js Todo App'
+app.locals.appname = 'Express.js Todo App';
 app.locals.moment = require('moment');
 
 app.set('views', __dirname + '/views');
@@ -31,21 +31,21 @@ if ('development' == app.get('env')) {
 }
 
 var urlDb =  process.env.MONGODB_URI || 'mongodb://localhost:27017/offers';
-console.log ("connect to " + urlDb)
+console.log ("connect to " + urlDb);
 
 MongoClient.connect( urlDb, function(err, db) {
 
     if (err) throw err;
 
-    console.log ("connected!")
+    console.log ("connected!");
     app.use ('/', routerOffers(db) );
 
     app.get('*', function(req, res){
       res.sendFile( __dirname + '/../client/index.html');
-    })
+    });
 
     app.listen( PORT, function(){
         console.log('Express server listening on port ' + PORT);
     });
 
-} )
+} );
