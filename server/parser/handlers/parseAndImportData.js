@@ -1,5 +1,7 @@
 var ranking = require('./data/ranking');
 var rankingDb = require('./data/ranking-db');
+var contBackEnd  = require('./contskillsdata/contBackEnd');
+var contLanguage  = require('./contskillsdata/contProgLanguages');
 
 function parseAndImportData(db,error, response, body) {
 
@@ -7,85 +9,21 @@ function parseAndImportData(db,error, response, body) {
 
 				for(var index in objectJSON) {
 					for (var subItem in objectJSON[index]) {
+
 						var paragraphSkills = objectJSON[index][subItem].requirementMin.replace(/[.\r\n\t, \/-]+/g, " ").toUpperCase().trim();
 						var arraySkills = paragraphSkills.split(' ');
+
 						arraySkills.forEach(function(item,i){
+
 							for (var index2 in ranking) {
 								for (var subItem in ranking[index2]){
-
-										if(item==='C++' && ranking[index2][subItem].name ==="C++"){
-											ranking[index2][subItem].num++;
-										}
-										if(item==='JAVA' && ranking[index2][subItem].name ==="Java"){
-											ranking[index2][subItem].num++;
-										}
-										if(item==='JAVASCRIPT' && ranking[index2][subItem].name ==="JavaScript"){
-											ranking[index2][subItem].num++;
-										}
-										if(item==='C#' && ranking[index2][subItem].name ==="C#"){
-											ranking[index2][subItem].num++;
-										}
-										if(item==='PYTHON' && ranking[index2][subItem].name ==="Python"){
-											ranking[index2][subItem].num++;
-										}
-										if(item==='ANGULAR' || item==='ANGULARJS' && ranking[index2][subItem].name ==="Angular"){
-											ranking[index2][subItem].num++;
-										}
-										if(item==='PHP' && ranking[index2][subItem].name ==="PHP"){
-											ranking[index2][subItem].num++;
-										}
-										if(item==='NET' && ranking[index2][subItem].name ==="Net"){
-											ranking[index2][subItem].num++;
-										}
-										if(item==='C' && ranking[index2][subItem].name ==="C"){
-											ranking[index2][subItem].num++;
-										}
-										if(item==='COBOL' && ranking[index2][subItem].name ==="Cobol"){
-											ranking[index2][subItem].num++;
-										}
-										if(item==='GO' && ranking[index2][subItem].name ==="Go"){
-											ranking[index2][subItem].num++;
-										}
-										if(item==='SQL'&& rankingDb[index2][subItem].name ==="SQL"){
-											rankingDb[index2][subItem].num++;
-										}
-										if(item==='MYSQL'&& rankingDb[index2][subItem].name ==="MySQL"){
-											rankingDb[index2][subItem].num++;
-										}
-										if(item==='NODE' && rankingDb[index2][subItem].name ==="Node"){
-											rankingDb[index2][subItem].num++;
-										}
-										if(item==='EXPRESS' && rankingDb[index2][subItem].name ==="Express"){
-											rankingDb[index2][subItem].num++;
-										}
-										if(item==='DJANGO' && rankingDb[index2][subItem].name ==="Django"){
-											rankingDb[index2][subItem].num++;
-										}
-										if(item==='SQLITE' && rankingDb[index2][subItem].name ==="sQlite"){
-											rankingDb[index2][subItem].num++;
-										}
-										if(item==='MONGODB' && rankingDb[index2][subItem].name ==="MongoDb"){
-											rankingDb[index2][subItem].num++;
-										}
-										if(item==='COUCHDB' && rankingDb[index2][subItem].name ==="CouchDB"){
-											rankingDb[index2][subItem].num++;
-										}
-										if(item==='REDIS' && rankingDb[index2][subItem].name ==="Redis"){
-											rankingDb[index2][subItem].num++;
-										}
-										if(item==='CASSANDRA' && rankingDb[index2][subItem].name ==="Cassandra"){
-											rankingDb[index2][subItem].num++;
-										}
-										if(item==='RUBY' && rankingDb[index2][subItem].name ==="Ruby"){
-											rankingDb[index2][subItem].num++;
-										}
-								}
+								contLanguage(item,ranking,index2,subItem);
+								contBackEnd(item,rankingDb,index2,subItem);
 							}
-
-						});
-					}
+						}
+					});
+				}
 			}
-
 
 				ranking._numOffers = ranking._numOffers.sort(function(obj1,obj2){
 
@@ -163,7 +101,7 @@ function parseAndImportData(db,error, response, body) {
 				db.close();
 			});
 
-			console.dir(objectJSON);
+			//console.dir(objectJSON);
 			console.log(posRanking);
 }
 
@@ -179,5 +117,6 @@ function removeDataOld(db,callback){
 	var collection = db.collection('offers');
 	collection.remove( { } );
 }
+
 
 module.exports = parseAndImportData;
