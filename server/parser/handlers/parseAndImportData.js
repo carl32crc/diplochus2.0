@@ -1,8 +1,11 @@
 var ranking = require('./data/ranking');
 var rankingDb = require('./data/ranking-db');
+var fivePosLanguage = require('./data/first5postionsLanguages.json');
+var fivePosDb = require('./data/first5postionsBackEnd.json');
 var contBackEnd  = require('./contskillsdata/contBackEnd');
 var contLanguage  = require('./contskillsdata/contProgLanguages');
 var orderData = require('./orderDataDescending/orderDescending');
+var firstPositionInJson = require('./firstFivePosition/firsFivePosition');
 
 function parseAndImportData(db,error, response, body) {
 
@@ -34,50 +37,35 @@ function parseAndImportData(db,error, response, body) {
 					db.close();
 				});
 
-			var total = ranking._numOffers[0].num+ranking._numOffers[1].num+ranking._numOffers[2].num+ranking._numOffers[3].num+ranking._numOffers[4].num;
+			// var total = ranking._numOffers[0].num+ranking._numOffers[1].num+ranking._numOffers[2].num+ranking._numOffers[3].num+ranking._numOffers[4].num;
 
-			var firstPercent = tantPercent(ranking._numOffers[0].num,total);
-			var secondPercent = tantPercent(ranking._numOffers[1].num,total);
-			var thirdPercent = tantPercent(ranking._numOffers[2].num,total);
-			var fourPercent = tantPercent(ranking._numOffers[3].num,total);
-			var fivePercent = tantPercent(ranking._numOffers[4].num,total);
+			// fivePosLanguage.positionOne = tantPercent(ranking._numOffers[0].num,total);
+			// fivePosLanguage.positionTwo = tantPercent(ranking._numOffers[1].num,total);
+			// fivePosLanguage.positionThree = tantPercent(ranking._numOffers[2].num,total);
+			// fivePosLanguage.positionFour = tantPercent(ranking._numOffers[3].num,total);
+			// fivePosLanguage.positionFive = tantPercent(ranking._numOffers[4].num,total);
 
-			var totalDb = rankingDb._numOffers[0].num+rankingDb._numOffers[1].num+rankingDb._numOffers[2].num+rankingDb._numOffers[3].num+rankingDb._numOffers[4].num;
+			// var totalDb = rankingDb._numOffers[0].num+rankingDb._numOffers[1].num+rankingDb._numOffers[2].num+rankingDb._numOffers[3].num+rankingDb._numOffers[4].num;
 
-			var firstPercentDb = tantPercent(rankingDb._numOffers[0].num,totalDb);
-			var secondPercentDb = tantPercent(rankingDb._numOffers[1].num,totalDb);
-			var thirdPercentDb = tantPercent(rankingDb._numOffers[2].num,totalDb);
-			var fourPercentDb = tantPercent(rankingDb._numOffers[3].num,totalDb);
-			var fivePercentDb = tantPercent(rankingDb._numOffers[4].num,totalDb);
+			// fivePosDb.positionOne = tantPercent(rankingDb._numOffers[0].num,totalDb);
+			// fivePosDb.positionTwo = tantPercent(rankingDb._numOffers[1].num,totalDb);
+			// fivePosDb.positionThree = tantPercent(rankingDb._numOffers[2].num,totalDb);
+			// fivePosDb.positionFour = tantPercent(rankingDb._numOffers[3].num,totalDb);
+			// fivePosDb.positionFive = tantPercent(rankingDb._numOffers[4].num,totalDb);
 
-			function  tantPercent(num,total){
-				var perCent = ((num/total)*100).toFixed(2);
-				return perCent;
-			}
+			firstPositionInJson(fivePosLanguage,ranking);
+			firstPositionInJson(fivePosDb,rankingDb);
 
-			var posRanking = {positionOne:firstPercent,
-							positionTwo:secondPercent,
-							positionThree:thirdPercent,
-							positionFour:fourPercent,
-							positionFive:fivePercent};
-
-			var posRankingDb = {positionOne:firstPercentDb,
-							positionTwo:secondPercentDb,
-							positionThree:thirdPercentDb,
-							positionFour:fourPercentDb,
-							positionFive:fivePercentDb};
-
-
-			insertStatistics(db, posRanking,function( data ) {
+			insertStatistics(db, fivePosLanguage,function( data ) {
 				db.close();
 			});
 
-			insertStatistics(db, posRankingDb,function( data ) {
+			insertStatistics(db, fivePosDb,function( data ) {
 				db.close();
 			});
 
 			//console.dir(objectJSON);
-			console.log(posRanking);
+			console.log(fivePosDb);
 }
 
 function insertStatistics(db,posRanking, callback) {
