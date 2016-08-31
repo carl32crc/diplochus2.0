@@ -9,17 +9,21 @@ var url = process.env.URL_API;
 var user = process.env.CLIENT_ID;
 var pass = process.env.CLIENT_SECRET;
 
-MongoClient.connect(url2, function(err, db) {
+setInterval(function (){
+			//console.log("afasd");
+			MongoClient.connect(url2, function(err, db) {
 
-	if (err) throw (err);
-	else console.log ("connected to  Mongo succesfully...");
+					if (err) throw (err);
+					else console.log ("connected to  Mongo succesfully...");
 
-	var auth = "Basic " + new Buffer(user + ":" + pass).toString("base64");
-	var parseAndImportData  = require('./handlers/parseAndImportData');
+					var auth = "Basic " + new Buffer(user + ":" + pass).toString("base64");
+					var parseAndImportData  = require('./handlers/parseAndImportData');
 
-	request( {
-		url : url,
-		headers : { "Authorization" : auth }
-	}, parseAndImportData.bind(null,db) );
+					request( {
+						url : url,
+						headers : { "Authorization" : auth }
+					}, parseAndImportData.bind(null,db) );
 
+					//console.log("1");
 });
+},25000);

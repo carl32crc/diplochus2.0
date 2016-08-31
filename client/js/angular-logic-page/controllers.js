@@ -2,7 +2,6 @@ angular.module("myAppControllers", ['zingchart-angularjs'])
 	.controller("pieStatistics", function( $rootScope,$scope,$http,getDataAndRender,createObjectChart) {
 
 		$rootScope.section ="pieStatistics";
-		var obj = {};
 
 		$http.get('/offers')
 			.success(function(data) {

@@ -1,11 +1,12 @@
 var ranking = require('./data/ranking');
 
-var contBackEnd  = require('./contskillsdata/contBackEnd');
-var contLanguage  = require('./contskillsdata/contProgLanguages');
-var orderData = require('./orderDataDescending/orderDescending');
-var firstPositionInJson = require('./firstFivePosition/firsFivePosition');
-var insertDataInMongo = require('./insertDataMongo/insertRankingMongo');
-var removeDataOld  = require('./removeDataOld/removeDataOld');
+var contBackEnd  = require('./utils/contBackEnd');
+var contLanguage  = require('./utils/contProgLanguages');
+var orderData = require('./utils/orderDescending');
+var firstPositionInJson = require('./utils/firsFivePosition');
+var insertDataInMongo = require('./utils/insertRankingMongo');
+var removeDataOld  = require('./utils/removeDataOld');
+var resetDataRanking = require('./utils/resetDataRankig');
 
 function parseAndImportData(db,error, response, body) {
 
@@ -36,8 +37,10 @@ function parseAndImportData(db,error, response, body) {
 				db.close();
 			});
 
-			//console.dir(objectJSON);
-			//console.log(fivePosDb);
+			resetDataRanking(ranking);
+
+			console.log(ranking);
+
 }
 
 module.exports = parseAndImportData;
