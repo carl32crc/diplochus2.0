@@ -1,6 +1,6 @@
 function getNumSkillsDb(ranking,itemSkill){
 
-	var itemNum = ranking._numOffers.forEach(function(itemName,i){
+	var itemNum = ranking._offersBackEnd.forEach(function(itemName,i){
 
 		if(itemSkill==='SQL'&& itemName.name ==="SQL"){
 			itemName.num++;

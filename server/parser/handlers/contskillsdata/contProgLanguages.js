@@ -1,9 +1,9 @@
 function getNumLanguagesProgramming(ranking,itemSkill){
 
-	var itemNum = ranking._numOffers.forEach(function(itemName,i){
+	var itemNum = ranking._offersLanguage.forEach(function(itemName,i){
 
 		if(itemSkill==='C++' && itemName.name ==="C++"){
-		itemName.num++;
+			itemName.num++;
 		}
 		if(itemSkill==='JAVA' && itemName.name ==="Java"){
 			itemName.num++;

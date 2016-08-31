@@ -7,8 +7,8 @@ angular.module("myAppControllers", ['zingchart-angularjs'])
 		$http.get('/offers')
 			.success(function(data) {
 
-				$scope.rankingAll=data[0]._numOffers;
-				$scope.rankingAllDb=data[1]._numOffers;
+				$scope.rankingAll=data[0]._offersLanguage;
+				$scope.rankingAllDb=data[0]._offersBackEnd;
 
 				$scope.valuesOfFrontEnd = getDataAndRender.getDataRankingLanguages(data);
 				$scope.valuesOfDataBase = getDataAndRender.getDataRankingDb(data);

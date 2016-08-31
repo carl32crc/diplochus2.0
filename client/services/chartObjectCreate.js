@@ -50,23 +50,23 @@ angular.module("myChartCreate")
 					},
 						series : [
 								{
-									text:data[0]._numOffers[4].name,
+									text:data[0]._offersLanguage[4].name,
 									backgroundColor: '#FF7965'
 								},
 								{
-									text:data[0]._numOffers[3].name,
+									text:data[0]._offersLanguage[3].name,
 									backgroundColor: '#50ADF5'
 								},
 								{
-									text:data[0]._numOffers[1].name,
+									text:data[0]._offersLanguage[1].name,
 									backgroundColor: '#6FB07F'
 								},
 								{
-									text:data[0]._numOffers[0].name,
+									text:data[0]._offersLanguage[0].name,
 									backgroundColor: '#6877e5'
 								},
 								{
-									text:data[0]._numOffers[2].name,
+									text:data[0]._offersLanguage[2].name,
 									backgroundColor: '#FFCB45'
 								}
 							]
@@ -124,23 +124,23 @@ angular.module("myChartCreate")
 					},
 						series : [
 								{
-									text:data[1]._numOffers[1].name,
+									text:data[0]._offersBackEnd[1].name,
 									backgroundColor: '#50ADF5'
 								},
 								{
-									text:data[1]._numOffers[0].name,
+									text:data[0]._offersBackEnd[0].name,
 									backgroundColor: '#6FB07F'
 								},
 								{
-									text:data[1]._numOffers[2].name,
+									text:data[0]._offersBackEnd[2].name,
 									backgroundColor: '#FFCB45'
 								},
 								{
-									text:data[1]._numOffers[3].name,
+									text:data[0]._offersBackEnd[3].name,
 									backgroundColor: '#6877e5'
 								},
 								{
-									text:data[1]._numOffers[4].name,
+									text:data[0]._offersBackEnd[4].name,
 									backgroundColor: '#FF7965'
 								}
 							]

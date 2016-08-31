@@ -1,5 +1,5 @@
 {
-  "_numOffers": [
+  "_offersLanguage": [
     {
       "name": "C++",
       "num": 0
@@ -44,5 +44,67 @@
       "name": "Go",
       "num": 0
     }
-  ]
+  ],
+  "_offersBackEnd": [
+    {
+      "name": "SQL",
+      "num": 0
+    },
+    {
+      "name": "MySQL",
+      "num": 0
+    },
+    {
+      "name": "Node",
+      "num": 0
+    },
+    {
+      "name": "Express",
+      "num": 0
+    },
+    {
+      "name": "Django",
+      "num": 0
+    },
+    {
+      "name": "sQlite",
+      "num": 0
+    },
+    {
+      "name": "MongoDb",
+      "num": 0
+    },
+    {
+      "name": "CouchDB",
+      "num": 0
+    },
+    {
+      "name": "Redis",
+      "num": 0
+    },
+    {
+      "name": "Cassandra",
+      "num": 0
+    },
+    {
+      "name": "Ruby",
+      "num": 0
+    }
+  ],
+  "_fivePosBack":
+   {
+  "positionOne":0,
+  "positionTwo":0,
+  "positionThree":0,
+  "positionFour":0,
+  "positionFive":0
+  },
+  "_fivePosLang":
+   {
+  "positionOne":0,
+  "positionTwo":0,
+  "positionThree":0,
+  "positionFour":0,
+  "positionFive":0
+  }
 }

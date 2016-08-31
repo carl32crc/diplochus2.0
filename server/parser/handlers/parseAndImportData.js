@@ -1,7 +1,5 @@
 var ranking = require('./data/ranking');
-var rankingDb = require('./data/ranking-db');
-var fivePosLanguage = require('./data/first5postionsLanguages.json');
-var fivePosDb = require('./data/first5postionsBackEnd.json');
+
 var contBackEnd  = require('./contskillsdata/contBackEnd');
 var contLanguage  = require('./contskillsdata/contProgLanguages');
 var orderData = require('./orderDataDescending/orderDescending');
@@ -20,15 +18,15 @@ function parseAndImportData(db,error, response, body) {
 
 				arraySkills.forEach(function(itemSkill,i){
 					contLanguage(ranking,itemSkill);
-					contBackEnd(rankingDb,itemSkill);
+					contBackEnd(ranking,itemSkill);
 				});
 			});
 
-			orderData(ranking);
-			orderData(rankingDb);
+			orderData(ranking._offersLanguage);
+			orderData(ranking._offersBackEnd);
 
-			firstPositionInJson(fivePosLanguage,ranking);
-			firstPositionInJson(fivePosDb,rankingDb);
+			firstPositionInJson(ranking._fivePosLang,ranking._offersLanguage);
+			firstPositionInJson(ranking._fivePosBack,ranking._offersBackEnd);
 
 			removeDataOld(db,function( data ) {
 				db.close();
@@ -38,19 +36,8 @@ function parseAndImportData(db,error, response, body) {
 				db.close();
 			});
 
-			insertDataInMongo(db, rankingDb,function( data ) {
-				db.close();
-			});
-
-			insertDataInMongo(db, fivePosLanguage,function( data ) {
-				db.close();
-			});
-
-			insertDataInMongo(db, fivePosDb,function( data ) {
-				db.close();
-			});
 			//console.dir(objectJSON);
-			console.log(fivePosDb);
+			//console.log(fivePosDb);
 }
 
 module.exports = parseAndImportData;

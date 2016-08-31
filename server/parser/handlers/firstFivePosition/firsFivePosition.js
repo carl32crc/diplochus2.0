@@ -1,12 +1,12 @@
 function getFirsFivePosition(firstFivePos,ranking){
 
-	var total = ranking._numOffers[0].num+ranking._numOffers[1].num+ranking._numOffers[2].num+ranking._numOffers[3].num+ranking._numOffers[4].num;
+	var total = ranking[0].num+ranking[1].num+ranking[2].num+ranking[3].num+ranking[4].num;
 
-	firstFivePos.positionOne = tantPercent(ranking._numOffers[0].num,total);
-	firstFivePos.positionTwo = tantPercent(ranking._numOffers[1].num,total);
-	firstFivePos.positionThree = tantPercent(ranking._numOffers[2].num,total);
-	firstFivePos.positionFour = tantPercent(ranking._numOffers[3].num,total);
-	firstFivePos.positionFive = tantPercent(ranking._numOffers[4].num,total);
+	firstFivePos.positionOne = tantPercent(ranking[0].num,total);
+	firstFivePos.positionTwo = tantPercent(ranking[1].num,total);
+	firstFivePos.positionThree = tantPercent(ranking[2].num,total);
+	firstFivePos.positionFour = tantPercent(ranking[3].num,total);
+	firstFivePos.positionFive = tantPercent(ranking[4].num,total);
 
 }
 
