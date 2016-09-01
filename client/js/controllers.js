@@ -1,0 +1,1 @@
+angular.module( 'controllers', ['homeModule','myChartCreate','searchCityModule'] );
