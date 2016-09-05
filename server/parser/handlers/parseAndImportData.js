@@ -1,4 +1,5 @@
 var ranking = require('./data/ranking');
+var  rankingProvince = require('./data/rankingProvince');
 
 var contBackEnd  = require('./utils/contBackEnd');
 var contLanguage  = require('./utils/contProgLanguages');
@@ -12,7 +13,6 @@ var contBackEndProvince = require('./utils/contBackEndProvince');
 var contDbaseProvince = require('./utils/contDbaseProvince');
 var contFramesProvince = require('./utils/contFramesworksProvince');
 var contOtherSkillsProvince = require('./utils/contOtherSkillsProvince');
-var prueba = require('./data/prueba');
 var contFrameworks = require('./utils/contFrameworks');
 var contOtherSkills = require('./utils/contOtherSkills');
 
@@ -34,14 +34,14 @@ function parseAndImportData(db,error, response, body) {
 					contBackEnd(ranking,itemSkill);
 					contFrameworks(ranking,itemSkill);
 					contOtherSkills(ranking,itemSkill);
-						contLanguageProvince(prueba,itemSkill,provinceClear[0]);
-						contDbaseProvince(prueba,itemSkill,provinceClear[0]);
-						contFramesProvince(prueba,itemSkill,provinceClear[0]);
-						contOtherSkillsProvince(prueba,itemSkill,provinceClear[0]);
+						contLanguageProvince(rankingProvince,itemSkill,provinceClear[0]);
+						contDbaseProvince(rankingProvince,itemSkill,provinceClear[0]);
+						contFramesProvince(rankingProvince,itemSkill,provinceClear[0]);
+						contOtherSkillsProvince(rankingProvince,itemSkill,provinceClear[0]);
 				});
 			});
 
-			prueba.date = formattedDate();
+			rankingProvince.date = formattedDate();
 			ranking.date = formattedDate();
 			//console.log(typeof(day));
 
@@ -65,7 +65,7 @@ function parseAndImportData(db,error, response, body) {
 				db.close();
 			});
 
-			insertDataInMongo(db, prueba,function( data ) {
+			insertDataInMongo(db, rankingProvince,function( data ) {
 				db.close();
 			});
 
