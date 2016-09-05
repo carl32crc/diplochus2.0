@@ -40,8 +40,10 @@ function parseAndImportData(db,error, response, body) {
 				});
 			});
 
-			rankingProvince.date = formattedDate();
-			ranking.date         = formattedDate();
+			for (var i = 0; i < rankingProvince.length; i++) {
+				rankingProvince[i].date  = formattedDate();
+			}
+			ranking.date             = formattedDate();
 
 			orderData(ranking._offersLanguage);
 			orderData(ranking._offersBackEnd);
