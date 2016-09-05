@@ -9,6 +9,9 @@ var removeDataOld  = require('./utils/removeDataOld');
 var resetDataRanking = require('./utils/resetDataRankig');
 var contLanguageProvince = require('./utils/contLanguageProvince');
 var contBackEndProvince = require('./utils/contBackEndProvince');
+var contDbaseProvince = require('./utils/contDbaseProvince');
+var contFramesProvince = require('./utils/contFramesworksProvince');
+var contOtherSkillsProvince = require('./utils/contOtherSkillsProvince');
 var prueba = require('./data/prueba');
 var contFrameworks = require('./utils/contFrameworks');
 var contOtherSkills = require('./utils/contOtherSkills');
@@ -32,9 +35,9 @@ function parseAndImportData(db,error, response, body) {
 					contFrameworks(ranking,itemSkill);
 					contOtherSkills(ranking,itemSkill);
 						contLanguageProvince(prueba,itemSkill,provinceClear[0]);
-						// contLanguageProvince(ranking,itemSkill,provinceClear[0]);
-						// contBackEndProvince(ranking,itemSkill,provinceClear[0]);
-
+						contDbaseProvince(prueba,itemSkill,provinceClear[0]);
+						contFramesProvince(prueba,itemSkill,provinceClear[0]);
+						contOtherSkillsProvince(prueba,itemSkill,provinceClear[0]);
 				});
 			});
 
