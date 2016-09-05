@@ -1,20 +1,21 @@
-var ranking = require('./data/ranking');
-var  rankingProvince = require('./data/rankingProvince');
+var ranking                  =  require('./data/ranking');
+var rankingProvince          =  require('./data/rankingProvince');
 
-var contBackEnd  = require('./utils/contBackEnd');
-var contLanguage  = require('./utils/contProgLanguages');
-var orderData = require('./utils/orderDescending');
-var firstPositionInJson = require('./utils/firsFivePosition');
-var insertDataInMongo = require('./utils/insertRankingMongo');
-var removeDataOld  = require('./utils/removeDataOld');
-var resetDataRanking = require('./utils/resetDataRankig');
-var contLanguageProvince = require('./utils/contLanguageProvince');
-var contBackEndProvince = require('./utils/contBackEndProvince');
-var contDbaseProvince = require('./utils/contDbaseProvince');
-var contFramesProvince = require('./utils/contFramesworksProvince');
-var contOtherSkillsProvince = require('./utils/contOtherSkillsProvince');
-var contFrameworks = require('./utils/contFrameworks');
-var contOtherSkills = require('./utils/contOtherSkills');
+var contBackEnd              =  require('./utils/contBackEnd');
+var contLanguage             =  require('./utils/contProgLanguages');
+var orderData                =  require('./utils/orderDescending');
+var firstPositionInJson      =  require('./utils/firsFivePosition');
+var insertDataInMongo        =  require('./utils/insertRankingMongo');
+var removeDataOld            =  require('./utils/removeDataOld');
+var resetDataRanking         =  require('./utils/resetDataRankig');
+var contLanguageProvince     =  require('./utils/contLanguageProvince');
+var contBackEndProvince      =  require('./utils/contBackEndProvince');
+var contDbaseProvince        =  require('./utils/contDbaseProvince');
+var contFramesProvince       =  require('./utils/contFramesworksProvince');
+var contOtherSkillsProvince  =  require('./utils/contOtherSkillsProvince');
+var contFrameworks           =  require('./utils/contFrameworks');
+var contOtherSkills          =  require('./utils/contOtherSkills');
+var cleanedString            =  require('./utils/cleanString');
 
 function parseAndImportData(db,error, response, body) {
 
@@ -22,12 +23,11 @@ function parseAndImportData(db,error, response, body) {
 
 			objectJSON.offers.forEach(function(itemAPI){
 
-				var province = itemAPI.province.value.toLowerCase().trim();
-				//console.log(province);
-				var provinceClear = getCleanedString(province).split('/');
+				var province        = itemAPI.province.value.toLowerCase().trim();
+				var provinceClear   = cleanedString(province).split('/');
 				var paragraphSkills = itemAPI.requirementMin.replace(/[().\r\n\t, \/-]+/g, " ").toUpperCase().trim();
-				var arraySkills = paragraphSkills.split(' ');
-				console.log(arraySkills);
+				var arraySkills     = paragraphSkills.split(' ');
+
 				arraySkills.forEach(function(itemSkill,i){
 
 					contLanguage(ranking,itemSkill);
@@ -42,8 +42,7 @@ function parseAndImportData(db,error, response, body) {
 			});
 
 			rankingProvince.date = formattedDate();
-			ranking.date = formattedDate();
-			//console.log(typeof(day));
+			ranking.date         = formattedDate();
 
 			orderData(ranking._offersLanguage);
 			orderData(ranking._offersBackEnd);
@@ -54,8 +53,6 @@ function parseAndImportData(db,error, response, body) {
 			firstPositionInJson(ranking._fivePosBack,ranking._offersBackEnd);
 			firstPositionInJson(ranking._fivePosFrameworks,ranking._frameworks);
 			firstPositionInJson(ranking._fivePosOtherSkills,ranking._othersskills);
-
-			//console.log(ranking);
 
 			removeDataOld(db,function( data ) {
 				db.close();
@@ -73,19 +70,6 @@ function parseAndImportData(db,error, response, body) {
 
 }
 
-function getCleanedString(cadena){
-	// Lo queremos devolver limpio en minusculas
-	cadena = cadena.toLowerCase();
-
-	// Quitamos acentos y "ñ". Fijate en que va sin comillas el primer parametro
-	cadena = cadena.replace(/á/gi,"a");
-	cadena = cadena.replace(/é/gi,"e");
-	cadena = cadena.replace(/í/gi,"i");
-	cadena = cadena.replace(/ó/gi,"o");
-	cadena = cadena.replace(/ú/gi,"u");
-	cadena = cadena.replace(/ñ/gi,"n");
-	return cadena;
-}
 
 function formattedDate(date) {
 	var d = new Date(date || Date.now()),
