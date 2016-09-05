@@ -9,7 +9,6 @@ var insertDataInMongo        =  require('./utils/insertRankingMongo');
 var removeDataOld            =  require('./utils/removeDataOld');
 var resetDataRanking         =  require('./utils/resetDataRankig');
 var contLanguageProvince     =  require('./utils/contLanguageProvince');
-var contBackEndProvince      =  require('./utils/contBackEndProvince');
 var contDbaseProvince        =  require('./utils/contDbaseProvince');
 var contFramesProvince       =  require('./utils/contFramesworksProvince');
 var contOtherSkillsProvince  =  require('./utils/contOtherSkillsProvince');

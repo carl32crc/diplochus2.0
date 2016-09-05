@@ -1,7 +1,5 @@
-{
+[{
   "date": "" ,
-  "provinces":[
-     {
       "province": "barcelona",
       "barcelonaLanguages": [
         {
@@ -187,8 +185,9 @@
           "num": 0
         }
       ]
-    },
-    {
+},
+{
+  "date": "" ,
       "province": "madrid",
       "madridLanguages": [
         {
@@ -374,8 +373,9 @@
           "num": 0
         }
       ]
-    },
-    {
+},
+{
+  "date": "" ,
       "province": "a coruna",
       "a corunaLanguages": [
         {
@@ -561,8 +561,9 @@
           "num": 0
         }
       ]
-    },
-    {
+},
+{
+  "date": "" ,
       "province": "alava",
       "alavaLanguages": [
         {
@@ -748,8 +749,9 @@
           "num": 0
         }
       ]
-    },
-    {
+},
+{
+  "date": "" ,
       "province": "albacete",
       "albaceteLanguages": [
         {
@@ -935,8 +937,9 @@
           "num": 0
         }
       ]
-    },
-    {
+},
+{
+  "date": "" ,
       "province": "alicante",
       "alicanteLanguages": [
         {
@@ -1122,8 +1125,9 @@
           "num": 0
         }
       ]
-    },
-    {
+},
+{
+  "date": "" ,
       "province": "almeria",
       "almeriaLanguages": [
         {
@@ -1309,8 +1313,9 @@
           "num": 0
         }
       ]
-    },
-    {
+},
+{
+  "date": "" ,
       "province": "asturias",
       "asturiasLanguages": [
         {
@@ -1496,8 +1501,9 @@
           "num": 0
         }
       ]
-    },
-    {
+},
+{
+  "date": "" ,
       "province": "avila",
       "avilaLanguages": [
         {
@@ -1683,8 +1689,9 @@
           "num": 0
         }
       ]
-    },
-    {
+},
+{
+  "date": "" ,
       "province": "badajoz",
       "badajozLanguages": [
         {
@@ -1870,8 +1877,9 @@
           "num": 0
         }
       ]
-    },
-    {
+},
+{
+  "date": "" ,
       "province": "burgos",
       "burgosLanguages": [
         {
@@ -2057,8 +2065,9 @@
           "num": 0
         }
       ]
-    },
-    {
+},
+{
+  "date": "" ,
       "province": "caceres",
       "caceresLanguages": [
         {
@@ -2244,8 +2253,9 @@
           "num": 0
         }
       ]
-    },
-    {
+},
+{
+  "date": "" ,
       "province": "cadiz",
       "cadizLanguages": [
         {
@@ -2431,8 +2441,9 @@
           "num": 0
         }
       ]
-    },
-    {
+},
+{
+  "date": "" ,
       "province": "cantabria",
       "cantabriaLanguages": [
         {
@@ -2618,8 +2629,9 @@
           "num": 0
         }
       ]
-    },
-    {
+},
+{
+  "date": "" ,
       "province": "castellon",
       "castellonLanguages": [
         {
@@ -2805,8 +2817,9 @@
           "num": 0
         }
       ]
-    },
-    {
+},
+{
+  "date": "" ,
       "province": "ceuta",
       "ceutaLanguages": [
         {
@@ -2992,8 +3005,9 @@
           "num": 0
         }
       ]
-    },
-    {
+},
+{
+  "date": "" ,
       "province": "ciudad real",
       "ciudad realLanguages": [
         {
@@ -3179,8 +3193,9 @@
           "num": 0
         }
       ]
-    },
-    {
+},
+{
+  "date": "" ,
       "province": "cordoba",
       "cordobaLanguages": [
         {
@@ -3366,8 +3381,9 @@
           "num": 0
         }
       ]
-    },
-    {
+},
+{
+  "date": "" ,
       "province": "cuenca",
       "cuencaLanguages": [
         {
@@ -3553,8 +3569,9 @@
           "num": 0
         }
       ]
-    },
-    {
+},
+{
+  "date": "" ,
       "province": "girona",
       "gironaLanguages": [
         {
@@ -3740,8 +3757,9 @@
           "num": 0
         }
       ]
-    },
-    {
+},
+{
+  "date": "" ,
       "province": "granada",
       "granadaLanguages": [
         {
@@ -3927,8 +3945,9 @@
           "num": 0
         }
       ]
-    },
-    {
+},
+{
+  "date": "" ,
       "province": "guadalajara",
       "guadalajaraLanguages": [
         {
@@ -4114,10 +4133,11 @@
           "num": 0
         }
       ]
-    },
-    {
-      "province": "guipuzcua",
-      "guipuzcuaLanguages": [
+},
+{
+  "date": "" ,
+      "province": "guipuzcoa",
+      "guipuzcoaLanguages": [
         {
         "name": "C++",
         "num": 0
@@ -4163,7 +4183,7 @@
           "num": 0
         }
       ],
-      "guipuzcuaDb": [
+      "guipuzcoaDb": [
         {
           "name": "Oracle",
           "num": 0
@@ -4209,7 +4229,7 @@
           "num": 0
         }
       ],
-      "guipuzcuaFrames": [
+      "guipuzcoaFrames": [
         {
           "name": "Angular",
           "num": 0
@@ -4255,7 +4275,7 @@
           "num": 0
         }
       ],
-      "guipuzcuaOthers": [
+      "guipuzcoaOthers": [
         {
           "name": "Wordpress",
           "num": 0
@@ -4301,8 +4321,9 @@
           "num": 0
         }
       ]
-    },
-    {
+},
+{
+  "date": "" ,
       "province": "huelva",
       "huelvaLanguages": [
         {
@@ -4488,8 +4509,9 @@
           "num": 0
         }
       ]
-    },
-    {
+},
+{
+  "date": "" ,
       "province": "huesca",
       "huescaLanguages": [
         {
@@ -4675,8 +4697,9 @@
           "num": 0
         }
       ]
-    },
-    {
+},
+{
+  "date": "" ,
       "province": "illes balears",
       "illes balearsLanguages": [
         {
@@ -4862,8 +4885,9 @@
           "num": 0
         }
       ]
-    },
-    {
+},
+{
+  "date": "" ,
       "province": "jaen",
       "jaenLanguages": [
         {
@@ -5049,8 +5073,9 @@
           "num": 0
         }
       ]
-    },
-    {
+},
+{
+  "date": "" ,
       "province": "la rioja",
       "la riojaLanguages": [
         {
@@ -5236,8 +5261,9 @@
           "num": 0
         }
       ]
-    },
-    {
+},
+{
+  "date": "" ,
       "province": "las palmas",
       "las palmasLanguages": [
         {
@@ -5423,8 +5449,9 @@
           "num": 0
         }
       ]
-    },
-    {
+},
+{
+  "date": "" ,
       "province": "leon",
       "leonLanguages": [
         {
@@ -5610,8 +5637,9 @@
           "num": 0
         }
       ]
-    },
-    {
+},
+{
+  "date": "" ,
       "province": "lleida",
       "lleidaLanguages": [
         {
@@ -5797,8 +5825,9 @@
           "num": 0
         }
       ]
-    },
-    {
+},
+{
+  "date": "" ,
       "province": "lugo",
       "lugoLanguages": [
         {
@@ -5984,8 +6013,9 @@
           "num": 0
         }
       ]
-    },
-    {
+},
+{
+  "date": "" ,
       "province": "malaga",
       "malagaLanguages": [
         {
@@ -6171,8 +6201,9 @@
           "num": 0
         }
       ]
-    },
-    {
+},
+{
+  "date": "" ,
       "province": "melilla",
       "melillaLanguages": [
         {
@@ -6358,8 +6389,9 @@
           "num": 0
         }
       ]
-    },
-    {
+},
+{
+  "date": "" ,
       "province": "murcia",
       "murciaLanguages": [
         {
@@ -6545,8 +6577,9 @@
           "num": 0
         }
       ]
-    },
-    {
+},
+{
+  "date": "" ,
       "province": "navarra",
       "navarraLanguages": [
         {
@@ -6732,8 +6765,9 @@
           "num": 0
         }
       ]
-    },
-    {
+},
+{
+  "date": "" ,
       "province": "ourense",
       "ourenseLanguages": [
         {
@@ -6919,8 +6953,9 @@
           "num": 0
         }
       ]
-    },
-    {
+},
+{
+  "date": "" ,
       "province": "palencia",
       "palenciaLanguages": [
         {
@@ -7106,8 +7141,9 @@
           "num": 0
         }
       ]
-    },
-    {
+},
+{
+  "date": "" ,
       "province": "pontevedra",
       "pontevedraLanguages": [
         {
@@ -7293,8 +7329,9 @@
           "num": 0
         }
       ]
-    },
-    {
+},
+{
+  "date": "" ,
       "province": "salamanca",
       "salamancaLanguages": [
         {
@@ -7480,8 +7517,9 @@
           "num": 0
         }
       ]
-    },
-    {
+},
+{
+  "date": "" ,
       "province": "santa cruz de tenerife",
       "santa cruz de tenerifeLanguages": [
         {
@@ -7667,8 +7705,9 @@
           "num": 0
         }
       ]
-    },
-    {
+},
+{
+  "date": "" ,
       "province": "segovia",
       "segoviaLanguages": [
         {
@@ -7854,195 +7893,9 @@
           "num": 0
         }
       ]
-    },
-    {
-      "province": "sevilla",
-      "sevillaLanguages": [
-        {
-        "name": "C++",
-        "num": 0
-        },
-        {
-          "name": "Java",
-          "num": 0
-        },
-        {
-          "name": "JavaScript",
-          "num": 0
-        },
-        {
-          "name": "C#",
-          "num": 0
-        },
-        {
-          "name": "Python",
-          "num": 0
-        },
-        {
-          "name": "Scala",
-          "num": 0
-        },
-        {
-          "name": "PHP",
-          "num": 0
-        },
-        {
-          "name": "Perl",
-          "num": 0
-        },
-        {
-          "name": "C",
-          "num": 0
-        },
-        {
-          "name": "Cobol",
-          "num": 0
-        },
-        {
-          "name": "Go",
-          "num": 0
-        }
-      ],
-      "sevillaDb": [
-        {
-          "name": "Oracle",
-          "num": 0
-        },
-        {
-          "name": "MySQL",
-          "num": 0
-        },
-        {
-          "name": "Microsoft Access",
-          "num": 0
-        },
-        {
-          "name": "PostgreSQL",
-          "num": 0
-        },
-        {
-          "name": "Sybase",
-          "num": 0
-        },
-        {
-          "name": "sQlite",
-          "num": 0
-        },
-        {
-          "name": "MongoDb",
-          "num": 0
-        },
-        {
-          "name": "CouchDB",
-          "num": 0
-        },
-        {
-          "name": "Redis",
-          "num": 0
-        },
-        {
-          "name": "Cassandra",
-          "num": 0
-        },
-        {
-          "name": "DB2",
-          "num": 0
-        }
-      ],
-      "sevillaFrames": [
-        {
-          "name": "Angular",
-          "num": 0
-        },
-        {
-          "name": "React",
-          "num": 0
-        },
-        {
-          "name": "Laravel",
-          "num": 0
-        },
-        {
-          "name": "Ionic",
-          "num": 0
-        },
-        {
-          "name": "Django",
-          "num": 0
-        },
-        {
-          "name": "Ruby on Rails",
-          "num": 0
-        },
-        {
-          "name": "Symfony",
-          "num": 0
-        },
-        {
-          "name": "SpringMVC",
-          "num": 0
-        },
-        {
-          "name": "JSP",
-          "num": 0
-        },
-        {
-          "name": ".NET",
-          "num": 0
-        },
-        {
-          "name": "BackBone",
-          "num": 0
-        }
-      ],
-      "sevillaOthers": [
-        {
-          "name": "Wordpress",
-          "num": 0
-        },
-        {
-          "name": "Joomla",
-          "num": 0
-        },
-        {
-          "name": "Prestashop",
-          "num": 0
-        },
-        {
-          "name": "Magento",
-          "num": 0
-        },
-        {
-          "name": "Drupal",
-          "num": 0
-        },
-        {
-          "name": "jQuery",
-          "num": 0
-        },
-        {
-          "name": "Bootstrap",
-          "num": 0
-        },
-        {
-          "name": "LESS",
-          "num": 0
-        },
-        {
-          "name": "SASS",
-          "num": 0
-        },
-        {
-          "name": "APIs",
-          "num": 0
-        },
-        {
-          "name": "Foundation",
-          "num": 0
-        }
-      ]
-    },
-    {
+},
+{
+  "date": "" ,
       "province": "soria",
       "soriaLanguages": [
         {
@@ -8228,8 +8081,9 @@
           "num": 0
         }
       ]
-    },
-    {
+},
+{
+  "date": "" ,
       "province": "tarragona",
       "tarragonaLanguages": [
         {
@@ -8415,8 +8269,9 @@
           "num": 0
         }
       ]
-    },
-    {
+},
+{
+  "date": "" ,
       "province": "teruel",
       "teruelLanguages": [
         {
@@ -8602,8 +8457,9 @@
           "num": 0
         }
       ]
-    },
-    {
+},
+{
+  "date": "" ,
       "province": "toledo",
       "toledoLanguages": [
         {
@@ -8789,8 +8645,9 @@
           "num": 0
         }
       ]
-    },
-    {
+},
+{
+  "date": "" ,
       "province": "valencia",
       "valenciaLanguages": [
         {
@@ -8976,8 +8833,9 @@
           "num": 0
         }
       ]
-    },
-    {
+},
+{
+  "date": "" ,
       "province": "valladolid",
       "valladolidLanguages": [
         {
@@ -9163,8 +9021,9 @@
           "num": 0
         }
       ]
-    },
-    {
+},
+{
+  "date": "" ,
       "province": "vizcaya",
       "vizcayaLanguages": [
         {
@@ -9350,8 +9209,9 @@
           "num": 0
         }
       ]
-    },
-    {
+},
+{
+  "date": "" ,
       "province": "zamora",
       "zamoraLanguages": [
         {
@@ -9537,8 +9397,9 @@
           "num": 0
         }
       ]
-    },
-    {
+},
+{
+  "date": "" ,
       "province": "zaragoza",
       "zaragozaLanguages": [
         {
@@ -9724,6 +9585,5 @@
           "num": 0
         }
       ]
-    }
-  ]
 }
+]

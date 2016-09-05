@@ -2,7 +2,7 @@ function getNumLanguagesProvince(ranking,itemSkill,provin){
 
 	var provinLang=provin+'Languages';
 
-	ranking.provinces.forEach(function(itemName,i){
+	ranking.forEach(function(itemName,i){
 
 		if(provin===itemName.province){
 
