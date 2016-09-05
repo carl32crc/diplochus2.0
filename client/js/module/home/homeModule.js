@@ -8,12 +8,20 @@ angular.module("homeModule", ['zingchart-angularjs'])
 
 				$scope.rankingAll=data[0]._offersLanguage;
 				$scope.rankingAllDb=data[0]._offersBackEnd;
+				$scope.rankingFrameworks=data[0]._frameworks;
+				$scope.rankingOtherSkills=data[0]._othersskills;
 
 				$scope.valuesOfFrontEnd = getDataAndRender.getDataRankingLanguages(data);
 				$scope.valuesOfDataBase = getDataAndRender.getDataRankingDb(data);
+				$scope.valuesOfFramework = getDataAndRender.getDataRankingFrameworks(data);
+				$scope.valuesOfOther = getDataAndRender.getDataRankingOtherSkills(data);
 
 				$scope.dataConfig = createObjectChart.crateChartForLanguages(data);
 				$scope.dataConfigDb = createObjectChart.crateChartForBackEnd(data);
+				$scope.dataOther = createObjectChart.crateChartForOtherSkills(data);
+				$scope.dataFrameworks = createObjectChart.crateChartForFrameworks(data);
+
+
 
 		})
 		.error(function(data) {

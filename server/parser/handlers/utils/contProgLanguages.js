@@ -17,13 +17,13 @@ function getNumLanguagesProgramming(ranking,itemSkill){
 		if(itemSkill==='PYTHON' && itemName.name ==="Python"){
 			itemName.num++;
 		}
-		if(itemSkill==='ANGULAR' || itemSkill==='ANGULARJS' && itemName.name ==="Angular"){
+		if(itemSkill==='SCALA' && itemName.name ==="Scala"){
 			itemName.num++;
 		}
 		if(itemSkill==='PHP' && itemName.name ==="PHP"){
 			itemName.num++;
 		}
-		if(itemSkill==='NET' && itemName.name ==="Net"){
+		if(itemSkill==='PERL' && itemName.name ==="Perl"){
 			itemName.num++;
 		}
 		if(itemSkill==='C' && itemName.name ==="C"){

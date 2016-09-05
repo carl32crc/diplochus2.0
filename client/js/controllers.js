@@ -1,1 +1,1 @@
-angular.module( 'controllers', ['homeModule','myChartCreate','searchCityModule'] );
+angular.module( 'controllers', ['homeModule','myChartCreate','searchProvinceModule'] );

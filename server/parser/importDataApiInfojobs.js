@@ -9,7 +9,7 @@ var url = process.env.URL_API;
 var user = process.env.CLIENT_ID;
 var pass = process.env.CLIENT_SECRET;
 
-setInterval(function (){
+//setInterval(function (){
 	MongoClient.connect(url2, function(err, db) {
 
 		if (err) throw (err);
@@ -18,10 +18,13 @@ setInterval(function (){
 		var auth = "Basic " + new Buffer(user + ":" + pass).toString("base64");
 		var parseAndImportData  = require('./handlers/parseAndImportData');
 
+		//console.log(url);
+		//console.log(auth);
+
 		request( {
 			url : url,
 			headers : { "Authorization" : auth }
 		}, parseAndImportData.bind(null,db) );
 
 });
-},25000);
+//},25000);

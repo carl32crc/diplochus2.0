@@ -38,4 +38,42 @@
 	  </table>
   	 </div>
   </div>
+  <div class="container-statistics">
+	<zingchart zc-values="valuesOfFramework" zc-json="dataFrameworks" ></zingchart>
+	<zingchart zc-values="valuesOfOther" zc-json="dataOther" ></zingchart>
+</div>
+  <div class="center-table">
+  	 <div class="datagrid">
+  	 	<table>
+	    <thead>
+	      <tr>
+	        <th>Frameworks</th>
+	        <th>Nº Offers</th>
+	      </tr>
+	    </thead>
+	    <tbody ng-repeat="rankFr in rankingFrameworks">
+	      <tr>
+	        <td>{{rankFr.name}}</td>
+	        <td>{{rankFr.num}}</td>
+	      </tr>
+	    </tbody>
+	  </table>
+	</div>
+	  <div class="datagrid">
+	  <table>
+	    <thead>
+	      <tr>
+	        <th>Other Skills</th>
+	        <th>Nº Offers</th>
+	      </tr>
+	    </thead>
+	    <tbody ng-repeat="rankOther in rankingOtherSkills">
+	      <tr>
+	        <td>{{rankOther.name}}</td>
+	        <td>{{rankOther.num}}</td>
+	      </tr>
+	    </tbody>
+	  </table>
+  	 </div>
+  </div>
 </section>

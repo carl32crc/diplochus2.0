@@ -64,14 +64,6 @@ section{
 	background-color: #243a56;
 }
 
-.list-group-item{
-	border: 0px;
-}
-
-#noTasks{
-	display: block;
-}
-
 .btn{
 	padding: 6px 4px;
 }
@@ -121,7 +113,7 @@ section{
 	border: 1px solid rgba(255,255,255,0.2);
 	border-radius: 0;
 	margin: 0 0 20px;
-	padding: 5px;
+	padding: 5px 15px;
 	padding-left: 15px;
 	font-size: 1em;
 	display: block;
@@ -130,7 +122,6 @@ section{
 }
 
 header>.header-item{
-	-webkit-box-flex:1;
 	-ms-flex:1 auto;
 	flex:1 auto
 }
@@ -199,6 +190,7 @@ header>.header-search-container{
 .datagrid {
 	font: normal 12px/150% Arial,Helvetica, sans-serif;
 	width: 40%;
+	margin-bottom: 40px;
 }
 
 .datagrid table td, .datagrid table th {

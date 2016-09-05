@@ -25,8 +25,34 @@ angular.module("myChartCreate")
 			return valuesOfDataBase;
 		}
 
+		function getDataRankingFrameworks(data){
+				var pos1Frame=parseFloat(data[0]._fivePosFrameworks.positionOne);
+				var pos2Frame=parseFloat(data[0]._fivePosFrameworks.positionTwo);
+				var pos3Frame=parseFloat(data[0]._fivePosFrameworks.positionThree);
+				var pos4Frame=parseFloat(data[0]._fivePosFrameworks.positionFour);
+				var pos5Frame=parseFloat(data[0]._fivePosFrameworks.positionFive);
+
+				valuesOfFrameworks = [[pos1Frame],[pos2Frame],[pos3Frame],[pos4Frame],[pos5Frame]];
+
+			return valuesOfFrameworks;
+		}
+
+		function getDataRankingOtherSkills(data){
+				var pos1Other=parseFloat(data[0]._fivePosOtherSkills.positionOne);
+				var pos2Other=parseFloat(data[0]._fivePosOtherSkills.positionTwo);
+				var pos3Other=parseFloat(data[0]._fivePosOtherSkills.positionThree);
+				var pos4Other=parseFloat(data[0]._fivePosOtherSkills.positionFour);
+				var pos5Other=parseFloat(data[0]._fivePosOtherSkills.positionFive);
+
+				valuesOfOther = [[pos1Other],[pos2Other],[pos3Other],[pos4Other],[pos5Other]];
+
+			return valuesOfOther;
+		}
+
 		return{
 			getDataRankingLanguages : getDataRankingLanguages,
-			getDataRankingDb : getDataRankingDb
+			getDataRankingDb : getDataRankingDb,
+			getDataRankingFrameworks : getDataRankingFrameworks,
+			getDataRankingOtherSkills : getDataRankingOtherSkills
 		};
 });

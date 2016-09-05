@@ -149,9 +149,159 @@ angular.module("myChartCreate")
 			return chart;
 		}
 
+		function crateChartForFrameworks(data){
+
+				var chart = {
+					type:"pie",
+					backgroundColor: "#2B313B",
+					plot:{
+						borderColor:"#2B313B",
+						borderWidth:5,
+						slice:60,
+						valueBox:{
+						placement:'out',
+						text:'%t\n%npv%',
+						fontFamily:"Open Sans"
+						},
+					tooltip:{
+						fontSize: '18',
+						fontFamily: "Open Sans",
+						padding: "5 10",
+						text: "%npv%"
+					},
+						animation:{
+							effect: 2,
+							method: 5,
+							speed: 500,
+							sequence: 1
+						}
+					},
+					title: {
+						fontColor: "#fff",
+						text: 'Frameworks',
+						align: "center",
+						offsetX: 10,
+						fontFamily: "Open Sans",
+						fontSize: 20
+					},
+					subtitle: {
+						offsetX: 10,
+						offsetY: 10,
+						fontColor: "#8e99a9",
+						fontFamily: "Open Sans",
+						fontSize: "12",
+						text: 'Skills with more demand in 2016',
+						align: "center"
+					},
+					plotarea: {
+						margin: "20 0 0 0"
+					},
+						series : [
+								{
+									text:data[0]._frameworks[0].name,
+									backgroundColor: '#FF7965'
+								},
+								{
+									text:data[0]._frameworks[1].name,
+									backgroundColor: '#50ADF5'
+								},
+								{
+									text:data[0]._frameworks[2].name,
+									backgroundColor: '#6FB07F'
+								},
+								{
+									text:data[0]._frameworks[3].name,
+									backgroundColor: '#6877e5'
+								},
+								{
+									text:data[0]._frameworks[4].name,
+									backgroundColor: '#FFCB45'
+								}
+							]
+					};
+
+			return chart;
+		}
+
+		function crateChartForOtherSkills(data){
+
+				var chart = {
+					type:"pie",
+					backgroundColor: "#2B313B",
+					plot:{
+						borderColor:"#2B313B",
+						borderWidth:5,
+						slice:60,
+						valueBox:{
+						placement:'out',
+						text:'%t\n%npv%',
+						fontFamily:"Open Sans"
+						},
+					tooltip:{
+						fontSize: '18',
+						fontFamily: "Open Sans",
+						padding: "5 10",
+						text: "%npv%"
+					},
+						animation:{
+							effect: 2,
+							method: 5,
+							speed: 500,
+							sequence: 1
+						}
+					},
+					title: {
+						fontColor: "#fff",
+						text: 'Other Skills',
+						align: "center",
+						offsetX: 10,
+						fontFamily: "Open Sans",
+						fontSize: 20
+					},
+					subtitle: {
+						offsetX: 10,
+						offsetY: 10,
+						fontColor: "#8e99a9",
+						fontFamily: "Open Sans",
+						fontSize: "12",
+						text: '',
+						align: "center"
+					},
+					plotarea: {
+						margin: "20 0 0 0"
+					},
+						series : [
+								{
+									text:data[0]._othersskills[0].name,
+									backgroundColor: '#FF7965'
+								},
+								{
+									text:data[0]._othersskills[1].name,
+									backgroundColor: '#50ADF5'
+								},
+								{
+									text:data[0]._othersskills[2].name,
+									backgroundColor: '#6FB07F'
+								},
+								{
+									text:data[0]._othersskills[3].name,
+									backgroundColor: '#6877e5'
+								},
+								{
+									text:data[0]._othersskills[4].name,
+									backgroundColor: '#FFCB45'
+								}
+							]
+					};
+
+			return chart;
+		}
+
 
 		return{
 			crateChartForLanguages : crateChartForLanguages,
-			crateChartForBackEnd : crateChartForBackEnd
+			crateChartForBackEnd : crateChartForBackEnd,
+			crateChartForOtherSkills : crateChartForOtherSkills,
+			crateChartForFrameworks : crateChartForFrameworks
 		};
 });

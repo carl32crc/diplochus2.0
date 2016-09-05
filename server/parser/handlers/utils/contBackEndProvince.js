@@ -1,6 +1,10 @@
-function getNumSkillsDb(ranking,itemSkill){
+function getBackEndProvince(ranking,itemSkill,province){
 
-	var itemNum = ranking._offersBackEnd.forEach(function(itemName,i){
+	var provinceDb = province + 'Db';
+
+
+if(provinceDb==='barcelonaDb' || provinceDb ==='a corunaDb' || provinceDb ==='madridDb'){
+	var itemNum = ranking[provinceDb].forEach(function(itemName,i){
 
 		if(itemSkill==='ORACLE'&& itemName.name ==="Oracle"){
 			itemName.num++;
@@ -40,8 +44,8 @@ function getNumSkillsDb(ranking,itemSkill){
 
 		});
 
-	return itemNum;
-
+		return itemNum;
+	}
 }
 
-module.exports = getNumSkillsDb;
+module.exports = getBackEndProvince;

@@ -1,1 +1,1 @@
-angular.module('services',['specServices','homeService']);
+angular.module('services',['searchProvinceService']);

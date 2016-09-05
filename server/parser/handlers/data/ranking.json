@@ -1,4 +1,5 @@
 {
+  "date":"",
   "_offersLanguage": [
     {
       "name": "C++",
@@ -21,7 +22,7 @@
       "num": 0
     },
     {
-      "name": "Angular",
+      "name": "Scala",
       "num": 0
     },
     {
@@ -29,7 +30,7 @@
       "num": 0
     },
     {
-      "name": "Net",
+      "name": "Perl",
       "num": 0
     },
     {
@@ -47,7 +48,7 @@
   ],
   "_offersBackEnd": [
     {
-      "name": "SQL",
+      "name": "Oracle",
       "num": 0
     },
     {
@@ -55,15 +56,15 @@
       "num": 0
     },
     {
-      "name": "Node",
+      "name": "Microsoft Access",
       "num": 0
     },
     {
-      "name": "Express",
+      "name": "PostgreSQL",
       "num": 0
     },
     {
-      "name": "Django",
+      "name": "Sybase",
       "num": 0
     },
     {
@@ -87,7 +88,99 @@
       "num": 0
     },
     {
-      "name": "Ruby",
+      "name": "DB2",
+      "num": 0
+    }
+  ],
+  "_frameworks": [
+    {
+      "name": "Angular",
+      "num": 0
+    },
+    {
+      "name": "React",
+      "num": 0
+    },
+    {
+      "name": "Laravel",
+      "num": 0
+    },
+    {
+      "name": "Meteor",
+      "num": 0
+    },
+    {
+      "name": "Django",
+      "num": 0
+    },
+    {
+      "name": "Ruby on Rails",
+      "num": 0
+    },
+    {
+      "name": "Symfony",
+      "num": 0
+    },
+    {
+      "name": "SpringMVC",
+      "num": 0
+    },
+    {
+      "name": "JSP",
+      "num": 0
+    },
+    {
+      "name": ".NET",
+      "num": 0
+    },
+    {
+      "name": "BackBone",
+      "num": 0
+    }
+  ],
+  "_othersskills": [
+    {
+      "name": "Wordpress",
+      "num": 0
+    },
+    {
+      "name": "Joomla",
+      "num": 0
+    },
+    {
+      "name": "Prestashop",
+      "num": 0
+    },
+    {
+      "name": "Magento",
+      "num": 0
+    },
+    {
+      "name": "Drupal",
+      "num": 0
+    },
+    {
+      "name": "jQuery",
+      "num": 0
+    },
+    {
+      "name": "Bootstrap",
+      "num": 0
+    },
+    {
+      "name": "LESS",
+      "num": 0
+    },
+    {
+      "name": "SASS",
+      "num": 0
+    },
+    {
+      "name": "APIs",
+      "num": 0
+    },
+    {
+      "name": "Foundation",
       "num": 0
     }
   ],
@@ -100,6 +193,22 @@
   "positionFive":0
   },
   "_fivePosLang":
+   {
+  "positionOne":0,
+  "positionTwo":0,
+  "positionThree":0,
+  "positionFour":0,
+  "positionFive":0
+  },
+  "_fivePosFrameworks":
+   {
+  "positionOne":0,
+  "positionTwo":0,
+  "positionThree":0,
+  "positionFour":0,
+  "positionFive":0
+  },
+  "_fivePosOtherSkills":
    {
   "positionOne":0,
   "positionTwo":0,
