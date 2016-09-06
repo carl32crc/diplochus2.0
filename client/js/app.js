@@ -1,1 +1,1 @@
-angular.module('myPage',[ 'ngRoute','controllers','routes']);
+angular.module('myPage',[ 'ngRoute','controllers','routes','services']);

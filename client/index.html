@@ -11,7 +11,7 @@
   </head>
   <body>
     <div class="header">
-    <div class="container-header">
+    <div class="container-header" ng-controller="searchAll">
     <header>
       <!-- logo -->
           <div class="logo-container" id='npm-logo'>
@@ -48,10 +48,10 @@
               </a>
         </div>
       <div class="header-item header-search-container">
-        <form class="site-search">
-        <input name="q" value="" type="search" id="site-search" placeholder="Find skill or city" tabindex="1" autocorrect="off" autocapitalize="off" itemprop="query-input" autocomplete="off">
+        <form class="site-search" ng-submit="submit()">
+        <input type="search" placeholder="Find skill or province" ng-model="provinceSearch" required>
         <button tabindex="2" type="submit">
-          <span class="a11y-only">Search</span>
+          <span class=""></span>
             <svg viewBox="0 0 34 34" fill="none" stroke="currentColor">
                 <ellipse stroke-width="3" cx="16" cy="15" rx="12" ry="12"/>
                 <path d="M26 26 l 8 8" stroke-width="3" stroke-linecap="square"/>
@@ -73,10 +73,13 @@
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular-resource.min.js"></script>
     <script src="js/app.js"></script>
     <script src="js/controllers.js"></script>
-    <script src="js/services.js"></script>
     <script src="js/routes.js"></script>
+    <script src="js/services.js"></script>
+    <script src="js/module/search/search.js"></script>
     <script src="js/module/home/homeModule.js"></script>
     <script src="js/module/home/routingHome.js"></script>
+
+    <script src="js/module/searchByProvince/searchProvinceService.js"></script>
     <script src="js/module/searchByProvince/searchProvince.js"></script>
     <script src="js/module/searchByProvince/routingSearchProvince.js"></script>
     <script src="utils/index.js"></script>

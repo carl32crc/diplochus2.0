@@ -10,7 +10,7 @@ function getRouter(db) {
 
 	router.get('/offers', showOffers.bind(null,db) );
 
-	router.get('/search-province', showOffersProvince.bind(null,db) );
+	router.get('/search-province/:province', showOffersProvince.bind(null,db) );
 
 	//router.get('/', getAll.bind(null, db) )
 
