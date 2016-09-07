@@ -1,23 +1,7 @@
 angular.module("homeModule", ['zingchart-angularjs'])
-	.controller("pieStatistics", function( $rootScope,$scope,$http,getDataAndRender,createObjectChart,provinceService) {
+	.controller("pieStatistics", function( $rootScope,$scope,$http,getDataAndRender,createObjectChart) {
 
 		$rootScope.section ="pieStatistics";
-
-		// $rootScope.$on('search', function (err,province) {
-		// 		provinceService.getProvince(province)
-		// 			.success(function(data) {
-		// 					console.log(data[0]);
-		// 					if(data[0]===undefined){
-		// 						$rootScope.province ="This don't exist";
-		// 					}else{
-		// 						$rootScope.province = province;
-		// 						console.log(data);
-		// 					}
-		// 			})
-		// 			.error(function(data) {
-		// 				console.log('Error: ' + data);
-		// 			});
-		// 	});
 
 		$http.get('/offers')
 			.success(function(data) {

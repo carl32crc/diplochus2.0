@@ -1,8 +1,8 @@
 angular.module("searchProvinceModule", ['zingchart-angularjs'])
-	.controller("provinceStatistics", function( $rootScope,$scope,$http,$location,provinceService) {
+	.controller("provinceStatistics", function( $rootScope,$scope,$http,$routeParams,provinceService) {
 
+			var province = $routeParams.province;
 
-		$rootScope.$on('search', function (err,province) {
 				provinceService.getProvince(province)
 					.success(function(data) {
 							console.log(data[0]);
@@ -16,6 +16,4 @@ angular.module("searchProvinceModule", ['zingchart-angularjs'])
 					.error(function(data) {
 						console.log('Error: ' + data);
 					});
-			});
-
-});
+	});

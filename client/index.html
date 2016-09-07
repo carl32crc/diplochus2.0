@@ -15,7 +15,7 @@
     <header>
       <!-- logo -->
           <div class="logo-container" id='npm-logo'>
-            <a href="/">
+            <a href="#/offers">
               <svg viewBox="0 0 300 182">
                   <g transform="translate(0.000000,182.000000) scale(0.100000,-0.100000)"
                   fill="#FFFFFF" stroke="none">
@@ -48,15 +48,17 @@
               </a>
         </div>
       <div class="header-item header-search-container">
-        <form class="site-search" ng-submit="submit()">
+        <form class="site-search">
         <input type="search" placeholder="Find skill or province" ng-model="provinceSearch" required>
-        <button tabindex="2" type="submit">
-          <span class=""></span>
-            <svg viewBox="0 0 34 34" fill="none" stroke="currentColor">
-                <ellipse stroke-width="3" cx="16" cy="15" rx="12" ry="12"/>
-                <path d="M26 26 l 8 8" stroke-width="3" stroke-linecap="square"/>
-            </svg>
-        </button>
+        <a href="/#/search-province/{{provinceSearch}}">
+            <button tabindex="2" type="submit">
+              <span class=""></span>
+                <svg viewBox="0 0 34 34" fill="none" stroke="currentColor">
+                    <ellipse stroke-width="3" cx="16" cy="15" rx="12" ry="12"/>
+                    <path d="M26 26 l 8 8" stroke-width="3" stroke-linecap="square"/>
+                </svg>
+            </button>
+         </a>
       </form>
 
       </div>
