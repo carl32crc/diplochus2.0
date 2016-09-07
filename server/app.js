@@ -2,6 +2,7 @@ var MongoClient = require('mongodb').MongoClient;
 var express = require('express');
 var http = require('http');
 var path = require('path');
+var favicon = require('serve-favicon');
 
 var logger = require('morgan'),
     bodyParser = require('body-parser'),
@@ -13,6 +14,8 @@ var PORT = process.env.PORT || 8080;
 
 var app = express();
 
+app.use(favicon('../client/img/logoDiplodocus2.ico'));
+
 app.locals.appname = 'Express.js Todo App';
 app.locals.moment = require('moment');
 
@@ -20,6 +23,10 @@ app.set('views', __dirname + '/views');
 app.set('view engine', 'jade');
 app.use(logger('dev'));
 app.use(bodyParser.urlencoded({extended: true}));
+
+
+
+
 
 app.use( require('less-middleware')(path.join(__dirname, '../client')) );
 app.use( express.static(path.join(__dirname, '../client')) );
