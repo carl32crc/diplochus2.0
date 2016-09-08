@@ -1,4 +1,5 @@
 var MongoClient = require('mongodb').MongoClient;
+// var mongoose = require('mongoose');
 var express = require('express');
 var http = require('http');
 var path = require('path');
@@ -11,6 +12,10 @@ var logger = require('morgan'),
 var routerOffers = require('./routes/offers');
 var PORT = process.env.PORT || 8080;
 
+
+// var MONGODB_URI = process.env.MONGODB_URI;
+
+// mongoose.connect(MONGODB_URI);
 
 var app = express();
 

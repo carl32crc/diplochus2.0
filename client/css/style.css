@@ -10,6 +10,10 @@ body {
 	text-rendering: optimizeLegibility;
 }
 
+.center-error{
+	margin-top: 100px;
+}
+
 div.table-title {
    display: block;
   margin: auto;
@@ -334,7 +338,7 @@ header>.header-search-container{
 
 .site-search [type=submit]{
 	position:absolute;
-	top:1px;
+	top:4px;
 	right:0;
 	height:34px;
 	width:34px;
@@ -350,6 +354,11 @@ header>.header-search-container{
 	-webkit-appearance:none;
 	appearance:none;
 	background-color:transparent
+}
+
+.color-href{
+	text-decoration: none;
+	color: white
 }
 
 h5{

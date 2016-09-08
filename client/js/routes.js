@@ -1,1 +1,1 @@
-angular.module('routes',['routeHome','routeSearchProvince']);
+angular.module('routes',['routeHome','routeSearchProvince','routeError']);

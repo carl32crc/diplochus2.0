@@ -1,6 +1,90 @@
 <div class="section-province">
 	{{province}}
 </div>
-<div class="section-province">
-	{{emoji}}
+<section>
+<div class="canvas-holder">
+	<div class="chart">
+		<h1>Programing Languages</h1>
+		<h5>Skills with more demmand in 2016</h5>
+  		<canvas id="chart-area5" />
+	</div>
+	<div class="chart">
+		<h1>Data Base</h1>
+		<h5>Skills with more demmand in 2016</h5>
+  		<canvas id="chart-area6" />
+	</div>
 </div>
+	<div class="center-table">
+		<table class="table-fill">
+			<thead>
+			<tr>
+				<th class="text-left">Language</th>
+				<th class="text-left">Nº Offers</th>
+			</tr>
+			</thead>
+			<tbody class="table-hover" ng-repeat="rank in rankingAll">
+				<tr>
+					<td class="text-left">{{rank.name}}</td>
+					<td class="text-left">{{rank.num}}</td>
+				</tr>
+			</tbody>
+		</table>
+		<table class="table-fill">
+			<thead>
+			<tr>
+				<th class="text-left">Data Base</th>
+				<th class="text-left">Nº Offers</th>
+			</tr>
+			</thead>
+			<tbody class="table-hover" ng-repeat="rankDb in rankingAllDb">
+				<tr>
+					<td class="text-left">{{rankDb.name}}</td>
+					<td class="text-left">{{rankDb.num}}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+ 
+  <div class="canvas-holder">
+		<div class="chart">
+			<h1>Frameworks</h1>
+			<h5>Skills with more demmand in 2016</h5>
+	  		<canvas id="chart-area7" />
+		</div>
+		<div class="chart">
+			<h1>Others Skills</h1>
+			<h5>Skills with more demmand in 2016</h5>
+	  		<canvas id="chart-area8" />
+		</div>
+  </div>
+  <div class="center-table">
+		<table class="table-fill">
+			<thead>
+			<tr>
+				<th class="text-left">Frameworks</th>
+				<th class="text-left">Nº Offers</th>
+			</tr>
+			</thead>
+			<tbody class="table-hover" ng-repeat="rankFr in rankingFrameworks">
+				<tr>
+					<td class="text-left">{{rankFr.name}}</td>
+					<td class="text-left">{{rankFr.num}}</td>
+				</tr>
+			</tbody>
+		</table>
+		<table class="table-fill">
+			<thead>
+			<tr>
+				<th class="text-left">Other Skills</th>
+				<th class="text-left">Nº Offers</th>
+			</tr>
+			</thead>
+			<tbody class="table-hover" ng-repeat="rankOther in rankingOtherSkills">
+				<tr>
+					<td class="text-left">{{rankOther.name}}</td>
+					<td class="text-left">{{rankOther.num}}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</section>

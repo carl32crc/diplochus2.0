@@ -2,6 +2,7 @@ angular.module("myChartCreate")
 	.factory('createObjectChartJs', function () {
 
 		function crateChartJs(data,title,value,chart){
+			console.log(value);
 
 			var config = {
 				type: 'bar',
@@ -77,7 +78,37 @@ angular.module("myChartCreate")
 
 		}
 
+		function positionProvince(data){
+			var obj = {
+				positionOne :  data[0].num,
+				positionTwo :  data[1].num,
+				positionThree: data[2].num,
+				positionFour : data[3].num,
+				positionFive : data[4].num
+			};
+
+			return obj;
+		}
+
+		function  orderDescendingData(ranking){
+
+			var rankingOrder = ranking.sort(function(obj1,obj2){
+
+						for(var property in obj1) {
+							prop1=property;
+						}
+						for(property in obj2) {
+							prop2=property;
+						}
+						return obj2[prop2]-obj1[prop1];
+					});
+
+				return rankingOrder;
+		}
+
 		return{
-			crateChartJs : crateChartJs
+			crateChartJs : crateChartJs,
+			positionProvince : positionProvince,
+			orderDescendingData : orderDescendingData
 		};
 });

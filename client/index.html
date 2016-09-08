@@ -49,8 +49,8 @@
         </div>
       <div class="header-item header-search-container">
         <form class="site-search">
-        <input type="search" placeholder="Find skill or province" ng-model="provinceSearch" required>
-        <a href="/#/search-province/{{provinceSearch}}">
+        <input type="search" placeholder="Find province..." ng-model="provinceSearch" required>
+        <a href="/#/search-province/{{provinceSearch}}" class="color-href">
             <button tabindex="2" type="submit">
               <span class=""></span>
                 <svg viewBox="0 0 34 34" fill="none" stroke="currentColor">
@@ -84,6 +84,8 @@
     <script src="js/module/searchByProvince/searchProvinceService.js"></script>
     <script src="js/module/searchByProvince/searchProvince.js"></script>
     <script src="js/module/searchByProvince/routingSearchProvince.js"></script>
+    <script src="js/module/badrequest/errorModule.js"></script>
+    <script src="js/module/badrequest/errorRouting.js"></script>
     <script src="utils/index.js"></script>
     <script src="utils/myChartCreate.js"></script>
 
