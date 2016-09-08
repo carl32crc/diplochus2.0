@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon server/app",
+    "dev": "MONGODB_URI=http://localhost/myDbName nodemon server.js",
     "start": "node server/app"
   },
   "engine" : {
