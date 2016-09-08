@@ -11,44 +11,40 @@
   		<canvas id="chart-area2" />
 	</div>
 </div>
-  
-  <div class="center-table">
-  	 <div class="datagrid">
-  	 	<table>
-	    <thead>
-	      <tr>
-	        <th>Language</th>
-	        <th>Nº Offers</th>
-	      </tr>
-	    </thead>
-	    <tbody ng-repeat="rank in rankingAll">
-	      <tr>
-	        <td>{{rank.name}}</td>
-	        <td>{{rank.num}}</td>
-	      </tr>
-	    </tbody>
-	  </table>
+	<div class="center-table">
+		<table class="table-fill">
+			<thead>
+			<tr>
+				<th class="text-left">Language</th>
+				<th class="text-left">Nº Offers</th>
+			</tr>
+			</thead>
+			<tbody class="table-hover" ng-repeat="rank in rankingAll">
+				<tr>
+					<td class="text-left">{{rank.name}}</td>
+					<td class="text-left">{{rank.num}}</td>
+				</tr>
+			</tbody>
+		</table>
+		<table class="table-fill">
+			<thead>
+			<tr>
+				<th class="text-left">Data Base</th>
+				<th class="text-left">Nº Offers</th>
+			</tr>
+			</thead>
+			<tbody class="table-hover" ng-repeat="rankDb in rankingAllDb">
+				<tr>
+					<td class="text-left">{{rankDb.name}}</td>
+					<td class="text-left">{{rankDb.num}}</td>
+				</tr>
+			</tbody>
+		</table>
 	</div>
-	  <div class="datagrid">
-	  <table>
-	    <thead>
-	      <tr>
-	        <th>Data Base</th>
-	        <th>Nº Offers</th>
-	      </tr>
-	    </thead>
-	    <tbody ng-repeat="rankDb in rankingAllDb">
-	      <tr>
-	        <td>{{rankDb.name}}</td>
-	        <td>{{rankDb.num}}</td>
-	      </tr>
-	    </tbody>
-	  </table>
-  	 </div>
-  </div>
+ 
   <div class="canvas-holder">
 		<div class="chart">
-			<h1>Framesworks</h1>
+			<h1>Frameworks</h1>
 			<h5>Skills with more demmand in 2016</h5>
 	  		<canvas id="chart-area3" />
 		</div>
@@ -59,37 +55,33 @@
 		</div>
   </div>
   <div class="center-table">
-  	 <div class="datagrid">
-  	 	<table>
-	    <thead>
-	      <tr>
-	        <th>FrameWorks</th>
-	        <th>Nº Offers</th>
-	      </tr>
-	    </thead>
-	    <tbody ng-repeat="rankFr in rankingFrameworks">
-	      <tr>
-	        <td>{{rankFr.name}}</td>
-	        <td>{{rankFr.num}}</td>
-	      </tr>
-	    </tbody>
-	  </table>
+		<table class="table-fill">
+			<thead>
+			<tr>
+				<th class="text-left">Frameworks</th>
+				<th class="text-left">Nº Offers</th>
+			</tr>
+			</thead>
+			<tbody class="table-hover" ng-repeat="rankFr in rankingFrameworks">
+				<tr>
+					<td class="text-left">{{rankFr.name}}</td>
+					<td class="text-left">{{rankFr.num}}</td>
+				</tr>
+			</tbody>
+		</table>
+		<table class="table-fill">
+			<thead>
+			<tr>
+				<th class="text-left">Other Skills</th>
+				<th class="text-left">Nº Offers</th>
+			</tr>
+			</thead>
+			<tbody class="table-hover" ng-repeat="rankOther in rankingOtherSkills">
+				<tr>
+					<td class="text-left">{{rankOther.name}}</td>
+					<td class="text-left">{{rankOther.num}}</td>
+				</tr>
+			</tbody>
+		</table>
 	</div>
-	  <div class="datagrid">
-	  <table>
-	    <thead>
-	      <tr>
-	        <th>Other Skills</th>
-	        <th>Nº Offers</th>
-	      </tr>
-	    </thead>
-	    <tbody ng-repeat="rankOther in rankingOtherSkills">
-	      <tr>
-	        <td>{{rankOther.name}}</td>
-	        <td>{{rankOther.num}}</td>
-	      </tr>
-	    </tbody>
-	  </table>
-  	 </div>
-  </div>
 </section>

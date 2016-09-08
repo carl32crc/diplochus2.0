@@ -5881,9 +5881,9 @@ module.exports = function() {
 			},
 			onClick: null,
 			defaultColor: 'rgba(0,0,0,0.1)',
-			defaultFontColor: '#666',
+			defaultFontColor: '#fff',
 			defaultFontFamily: "'Helvetica Neue', 'Helvetica', 'Arial', sans-serif",
-			defaultFontSize: 12,
+			defaultFontSize: 15,
 			defaultFontStyle: 'normal',
 			showLines: true,
 

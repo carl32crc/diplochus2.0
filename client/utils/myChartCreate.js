@@ -4,7 +4,7 @@ angular.module("myChartCreate")
 		function crateChartJs(data,title,value,chart){
 
 			var config = {
-				type: 'doughnut',
+				type: 'bar',
 				data: {
 					datasets: [{
 					data: [
@@ -32,9 +32,21 @@ angular.module("myChartCreate")
 					]
 				},
 				options: {
+					scales : {
+						xAxes : [ {
+							gridLines : {
+								display : false
+							}
+						}],
+						yAxes : [ {
+							gridLines : {
+								display : false
+							}
+						}]
+					},
 					responsive: true,
 					legend: {
-					position: 'bottom',
+					position: 'bottom'
 				},
 				title: {
 					display: false,
@@ -53,7 +65,7 @@ angular.module("myChartCreate")
 
 								var currentValue = dataset.data[tooltipItem.index];
 
-								return label + ' ' + currentValue + "%";
+								return currentValue + "%";
 							}
 						}
 					}

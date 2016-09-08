@@ -7,6 +7,9 @@
     "dev": "nodemon server/app",
     "start": "node server/app"
   },
+  "engine" : {
+    "node": "4.4.4"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
