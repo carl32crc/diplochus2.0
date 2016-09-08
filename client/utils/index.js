@@ -1,1 +1,1 @@
-angular.module('myChartCreate',[])
+angular.module('myChartCreate',[]);
