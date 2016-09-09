@@ -21,10 +21,17 @@ angular.module("searchProvinceModule", [])
 								createObjectChartJs.orderDescendingData(data[0][nameFrames]);
 								createObjectChartJs.orderDescendingData(data[0][nameOther]);
 
+
+
 								var prLang = createObjectChartJs.positionProvince(data[0][nameLanguages]);
 								var prDb = createObjectChartJs.positionProvince(data[0][nameDb]);
 								var prFrame = createObjectChartJs.positionProvince(data[0][nameFrames]);
 								var prOther = createObjectChartJs.positionProvince(data[0][nameOther]);
+
+								createObjectChartJs.getFirsFivePosition(prLang,data[0][nameLanguages]);
+								createObjectChartJs.getFirsFivePosition(prDb,data[0][nameDb]);
+								createObjectChartJs.getFirsFivePosition(prFrame,data[0][nameFrames]);
+								createObjectChartJs.getFirsFivePosition(prOther,data[0][nameOther]);
 
 								createObjectChartJs.crateChartJs(data[0][nameLanguages],'Programming Languages',prLang,'chart-area5');
 								createObjectChartJs.crateChartJs(data[0][nameDb],'Programming Languages',prDb,'chart-area6');

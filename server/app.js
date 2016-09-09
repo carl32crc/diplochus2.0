@@ -38,7 +38,7 @@ if ('development' == app.get('env')) {
     app.use(errorHandler());
 }
 
-// var urlDb =  process.env.MONGODB_URI || 'mongodb://localhost:27017/offers';
+var urlDb =  process.env.MONGODB_URI || 'mongodb://localhost:27017/offers';
 // console.log ("connect to " + urlDb);
 
 var mongoUri = 'mongodb://carl:carl@ds019886.mlab.com:19886/offers';
