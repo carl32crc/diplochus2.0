@@ -1,5 +1,5 @@
 function removeDataOld(db,callback){
-	var collection = db.collection('offers');
+	var collection = db.collection('offert');
 	collection.remove( { } );
 }
 

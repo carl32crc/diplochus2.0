@@ -1,7 +1,7 @@
 angular.module("searchProvinceModule", [])
 	.controller("provinceStatistics", function( $rootScope,$scope,$http,$routeParams,$window,provinceService,createObjectChartJs) {
 
-			var province = $routeParams.province;
+			var province = $routeParams.province.toLowerCase();
 
 				provinceService.getProvince(province)
 					.success(function(data) {

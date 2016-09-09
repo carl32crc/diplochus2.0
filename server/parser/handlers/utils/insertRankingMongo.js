@@ -1,6 +1,8 @@
 function insertRankingMongo(db,posRanking, callback) {
 
-	var collection = db.collection('offers');
+	var collection = db.collection('offert');
+
+	console.log(posRanking);
 
 	collection.insert(posRanking);
 
