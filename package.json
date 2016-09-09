@@ -7,7 +7,7 @@
     "dev": "nodemon server/app",
     "start": "node server/app"
   },
-  "engine" : {
+  "engine": {
     "node": "4.4.4"
   },
   "keywords": [],
@@ -18,7 +18,7 @@
     "body-parser": "^1.15.2",
     "errorhandler": "^1.4.3",
     "express": "^4.14.0",
-    "grunt": "^0.4.5",
+    "grunt": "^1.0.1",
     "grunt-contrib-jade": "^0.14.1",
     "jade": "^1.9.2",
     "less-middleware": "^2.2.0",
@@ -28,5 +28,14 @@
     "node-env-file": "^0.1.8",
     "request": "^2.74.0",
     "serve-favicon": "^2.3.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^6.3.7",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-uglify": "^2.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-postcss": "^0.8.0",
+    "gulp-uglify": "^2.0.0"
   }
 }

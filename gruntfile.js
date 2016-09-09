@@ -1,30 +1,33 @@
 module.exports = function(grunt) {
-  // Project configuration.
-  grunt.initConfig({});
-  grunt.registerTask('default', []);
+  grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-contrib-sass');
+  grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-postcss');
+  grunt.loadNpmTasks('grunt-contrib-concat');
 
   grunt.initConfig({
-    jade: {
-      compile: {
-        options: {
-          pretty: true,
-        },
-        files: {
-          'views/dist/offers.html': 'views/offers.jade',
-          'views/dist/index.html': 'views/layout.jade'
+   
+      watch: {
+            options: {
+              livereload: true
+            },
+          uglify: {
+              my_target: {
+                files: {
+                    'client/dist/scripts.min.js': [
+                      'client/js/*',
+                      'client/utils/*.js',
+                      'client/module/home/*.js',
+                      'client/module/badrequest/*.js',
+                      'client/module/search/*.js',
+                      'client/module/searchByProvince/*.js'
+                    ]
+                }
+              }
+          }
         }
-      }
-    },
-    watch: {
-      grunt: { files: ['Gruntfile.js'] },
-      jade: {
-        files: 'views/*.jade',
-        tasks: ['jade']
-      }
-    }
   });
-  // These plugins provide necessary tasks.
-  grunt.loadNpmTasks('grunt-contrib-jade');
-  // Default task.
-  grunt.registerTask('build', 'Convert Jade templates into html templates', ['jade']);
+
+
+  grunt.registerTask('default', ['watch']);
 };
