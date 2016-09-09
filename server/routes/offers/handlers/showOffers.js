@@ -1,6 +1,6 @@
 function showOffers(db,req,res){
 
-  var collection = db.collection('offers');
+  var collection = db.collection('offert');
 
   console.log("showOffers...");
 	collection.find()

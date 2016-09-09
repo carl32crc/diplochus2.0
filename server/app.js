@@ -13,10 +13,6 @@ var routerOffers = require('./routes/offers');
 var PORT = process.env.PORT || 8080;
 
 
-// var MONGODB_URI = process.env.MONGODB_URI;
-
-// mongoose.connect(MONGODB_URI);
-
 var app = express();
 
 app.use(favicon('../client/img/logoDiplodocus2.ico'));
@@ -42,10 +38,13 @@ if ('development' == app.get('env')) {
     app.use(errorHandler());
 }
 
-var urlDb =  process.env.MONGODB_URI || 'mongodb://localhost:27017/offers';
-console.log ("connect to " + urlDb);
+// var urlDb =  process.env.MONGODB_URI || 'mongodb://localhost:27017/offers';
+// console.log ("connect to " + urlDb);
 
-MongoClient.connect( urlDb, function(err, db) {
+var mongoUri = 'mongodb://carl:carl@ds019886.mlab.com:19886/offers';
+
+
+MongoClient.connect( mongoUri , function(err, db) {
 
     if (err) throw err;
 
