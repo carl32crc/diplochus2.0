@@ -15,7 +15,7 @@ var PORT = process.env.PORT || 8080;
 
 var app = express();
 
-app.use(favicon('../client/img/logoDiplodocus2.ico'));
+// app.use(favicon('../client/img/logoDiplodocus.png'));
 
 app.locals.appname = 'Express.js Todo App';
 app.locals.moment = require('moment');
