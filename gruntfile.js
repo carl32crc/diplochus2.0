@@ -14,10 +14,10 @@ module.exports = function(grunt) {
             js: {
           files: ['client/js/*',
                   'client/utils/*.js',
-                  'client/module/home/*.js',
-                  'client/module/badrequest/*.js',
-                  'client/module/search/*.js',
-                  'client/module/searchByProvince/*.js',],
+                  'client/js/module/home/*.js',
+                  'client/js/module/badrequest/*.js',
+                  'client/js/module/search/*.js',
+                  'client/js/module/searchByProvince/*.js',],
           tasks: ['concat']
       }
     },
@@ -25,11 +25,11 @@ module.exports = function(grunt) {
       js:{
         src:[
                 'client/js/*',
-                'client/utils/*.js',
-                'client/module/home/*.js',
-                'client/module/badrequest/*.js',
-                'client/module/search/*.js',
-                'client/module/searchByProvince/*.js'
+                'client/js/utils/*',
+                'client/js/module/home/*',
+                'client/js/module/badrequest/*',
+                'client/js/module/search/*',
+                'client/js/module/searchByProvince/*'
               ],
           dest:'client/dist/scripts.min.js'
       }
@@ -39,11 +39,11 @@ module.exports = function(grunt) {
                 files: {
                     'client/dist/scripts.min.js': [
                       'client/js/*',
-                      // 'client/utils/*.js',
-                      // 'client/module/home/*.js',
-                      // 'client/module/badrequest/*.js',
-                      // 'client/module/search/*.js',
-                      // 'client/module/searchByProvince/*.js'
+                      'client/js/utils/*.js',
+                      'client/js/module/home/*.js',
+                      'client/js/module/badrequest/*.js',
+                      'client/js/module/search/*.js',
+                      'client/js/module/searchByProvince/*.js'
                     ]
                 }
               }

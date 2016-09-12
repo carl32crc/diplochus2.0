@@ -1,7 +1,7 @@
 angular.module("searchProvinceModule", [])
 	.controller("provinceStatistics", function( $rootScope,$scope,$http,$routeParams,$window,provinceService,createObjectChartJs) {
 
-			var province = $routeParams.province.toLowerCase();
+			var province  = $routeParams.province.toLowerCase();
 
 				provinceService.getProvince(province)
 					.success(function(data) {
@@ -20,8 +20,6 @@ angular.module("searchProvinceModule", [])
 								createObjectChartJs.orderDescendingData(data[0][nameDb]);
 								createObjectChartJs.orderDescendingData(data[0][nameFrames]);
 								createObjectChartJs.orderDescendingData(data[0][nameOther]);
-
-
 
 								var prLang = createObjectChartJs.positionProvince(data[0][nameLanguages]);
 								var prDb = createObjectChartJs.positionProvince(data[0][nameDb]);
